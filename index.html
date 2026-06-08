@@ -309,7 +309,7 @@ footer .pen-sign{font-family:var(--pen);font-size:1.4rem;color:var(--rose-ink);m
     <h1 data-i18n-html="h1">내 손글씨가<br><span class="pen-accent">진짜 폰트<svg viewBox="0 0 340 24" aria-hidden="true"><path d="M4 16 Q 60 6 120 13 T 230 12 T 336 10"/></svg></span>가 돼요</h1>
     <p class="sub" data-i18n="hero_sub">애플펜슬로 몇 글자만 쓰면, AI가 나머지 한글을 내 글씨체로 채워요. 진짜 폰트 파일(.ttf)로 내보내서 굿노트·프로크리에이트·키노트 어디서든 쓰세요.</p>
     <div class="cta-row">
-      <a class="btn btn-primary" id="waitlistBtn" href="https://usejiin.link/tappytype/waitlist/ko" target="_blank" rel="noopener">✍️ <span data-i18n="cta_waitlist">출시 알림 신청하기</span></a>
+      <a class="btn btn-primary" id="waitlistBtn" href="/waitlist/">✍️ <span data-i18n="cta_waitlist">출시 알림 신청하기</span></a>
       <a class="btn btn-ghost" href="#video">▶ <span data-i18n="cta_video">55초 데모 보기</span></a>
     </div>
     <p class="coming">🍎 <span data-i18n="coming">App Store 출시 준비 중이에요</span> · <a href="https://www.instagram.com/tappytype/" target="_blank" rel="noopener" data-i18n="coming_ig">인스타에서 소식 받기 @tappytype</a></p>
@@ -433,7 +433,7 @@ footer .pen-sign{font-family:var(--pen);font-size:1.4rem;color:var(--rose-ink);m
   <div class="fbrand">TappyType</div>
   <div data-i18n="ft_tag">아이패드 전용 · 애플펜슬 한글 손글씨 폰트 메이커</div>
   <div class="links">
-    <a id="waitlistFootLink" href="https://usejiin.link/tappytype/waitlist/ko" target="_blank" rel="noopener" data-i18n="ft_waitlist">출시 알림 신청</a>
+    <a id="waitlistFootLink" href="/waitlist/" data-i18n="ft_waitlist">출시 알림 신청</a>
     <a href="./privacy/" data-i18n="nav_privacy">개인정보 처리방침</a>
     <a href="https://www.instagram.com/tappytype/" target="_blank" rel="noopener">Instagram @tappytype</a>
     <a href="mailto:team@tappytype.com" data-i18n="ft_contact">문의하기</a>
@@ -517,7 +517,7 @@ function applyLang() {
   // waitlist 링크는 언어별 경로로
   ['waitlistBtn', 'waitlistFootLink'].forEach(id => {
     const el = document.getElementById(id);
-    if (el) el.href = 'https://usejiin.link/tappytype/waitlist/' + lang;
+    if (el) el.href = "/waitlist/?lang=" + lang;
   });
 }
 langBtn.addEventListener('click', () => { lang = lang === 'ko' ? 'en' : 'ko'; localStorage.setItem('tt-lang', lang); applyLang(); });
