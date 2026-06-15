@@ -1,0 +1,14 @@
+{
+  "name": "TappyType — 한글 손글씨 폰트 메이커",
+  "short_name": "TappyType",
+  "description": "내 손글씨를 진짜 한글 폰트(.ttf)로. 몇 글자만 쓰면 AI가 나머지를 채워요.",
+  "lang": "ko",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFF7F3",
+  "theme_color": "#FFF7F3",
+  "icons": [
+    { "src": "/assets/icon-180.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/assets/favicon.png", "sizes": "any", "type": "image/png" }
+  ]
+}

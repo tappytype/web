@@ -1,0 +1,4 @@
+# Cloudflare Pages redirects
+# waitlist 라우트 폐지 → 다운로드 섹션으로 (출시 완료)
+/waitlist      /#download   301
+/waitlist/*    /#download   301

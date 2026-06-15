@@ -3,156 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>사전 신청 / Waitlist — TappyType</title>
-<meta name="description" content="애플펜슬로 쓴 손글씨를 나만의 한글 폰트로. TappyType 출시 소식을 가장 먼저 받아보세요.">
-<meta property="og:title" content="TappyType 사전 신청">
-<meta property="og:description" content="애플펜슬로 쓴 손글씨를 나만의 한글 폰트로. 출시 소식을 가장 먼저 받아보세요.">
-<meta property="og:image" content="https://tappytype.com/assets/og-image.jpg">
-<meta property="og:url" content="https://tappytype.com/waitlist/">
-<meta property="og:type" content="website">
-<link rel="canonical" href="https://tappytype.com/waitlist/">
-<link rel="icon" type="image/png" href="../assets/favicon.png">
-<link rel="apple-touch-icon" href="../assets/icon-180.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<title>TappyType — App Store에서 받기</title>
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://tappytype.com/">
+<!-- 사전 신청(waitlist)은 출시와 함께 종료됨 → 다운로드 섹션으로 이동 -->
+<meta http-equiv="refresh" content="0; url=/#download">
+<script>location.replace('/#download');</script>
 <style>
-:root{
-  --ivory:#FFF7F3; --cream:#F6EFE6; --blush:#FFE4EA; --rose:#F6C5CE;
-  --rose-deep:#F2A8B8; --lavender:#C5B4DC; --lavender-tint:#E8DDF4;
-  --coral:#FFB3AA; --cocoa:#6B4F43; --cocoa-soft:#8D6E63; --cocoa-muted:#7A5E52;
-  --soft-gray:#E6E2DD; --warm-white:#FFFDFB; --rose-ink:#C75A72; --lavender-ink:#6E579F;
-  --serif:'Playfair Display',serif; --body:'Gowun Dodum',sans-serif; --pen:'Nanum Pen Script',cursive;
-  --shadow-card:0 2px 24px rgba(107,79,67,.09); --shadow-pop:0 12px 40px rgba(107,79,67,.14);
-}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  font-family:var(--body);color:var(--cocoa);background:var(--ivory);line-height:1.7;min-height:100vh;
-  background-image:repeating-linear-gradient(to bottom,transparent 0,transparent 47px,rgba(107,79,67,.045) 47px,rgba(107,79,67,.045) 48px);
-}
-::selection{background:var(--blush);color:var(--rose-ink)}
-img{max-width:100%;height:auto;display:block}
-a{color:var(--rose-ink)}
-nav{
-  position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:.6rem;
-  padding:.7rem clamp(1rem,4vw,2.5rem);
-  background:rgba(255,247,243,.86);backdrop-filter:blur(10px);border-bottom:1px solid rgba(230,226,221,.6);
-}
-nav img{width:34px;height:34px}
-nav a.wordmark{font-family:var(--serif);font-weight:700;font-size:1.25rem;color:var(--cocoa);text-decoration:none}
-nav .spacer{flex:1}
-.lang-toggle{
-  font-family:var(--body);font-size:.82rem;color:var(--cocoa);cursor:pointer;
-  background:var(--warm-white);border:1px solid var(--soft-gray);border-radius:999px;padding:.32rem .85rem;transition:.2s;
-}
-.lang-toggle:hover{border-color:var(--rose);background:var(--blush)}
-
-main{max-width:660px;margin:0 auto;padding:clamp(2.5rem,7vh,5rem) clamp(1.2rem,5vw,2rem) 4rem;text-align:center}
-.mascot{width:140px;margin:0 auto 1.2rem;animation:bob 3.4s ease-in-out infinite;filter:drop-shadow(0 8px 18px rgba(107,79,67,.16))}
-@keyframes bob{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-8px) rotate(1.5deg)}}
-.eyebrow{display:inline-block;font-size:.8rem;letter-spacing:.04em;color:var(--lavender-ink);background:var(--lavender-tint);border-radius:999px;padding:.32rem 1rem;margin-bottom:1.1rem}
-h1{font-size:clamp(2rem,5vw,2.9rem);font-weight:400;line-height:1.3;letter-spacing:-.015em}
-h1 .pen{font-family:var(--pen);color:var(--rose-ink);font-size:1.15em}
-.lead{margin:1.3rem 0 .5rem;font-size:1.05rem;color:var(--cocoa-muted)}
-.sub{font-size:.95rem;color:var(--cocoa-muted)}
-.cta{
-  display:inline-flex;align-items:center;gap:.5rem;margin-top:2rem;text-decoration:none;cursor:pointer;
-  font-family:var(--body);font-size:1.05rem;color:#fff;border:none;border-radius:1.2rem;padding:.95rem 2rem;
-  background:linear-gradient(135deg,var(--rose-deep),var(--rose-ink));
-  box-shadow:0 6px 20px rgba(199,90,114,.28);transition:.25s;
-}
-.cta:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(199,90,114,.36)}
-.hint{margin-top:1rem;font-size:.8rem;color:var(--cocoa-muted);max-width:30rem;margin-inline:auto}
-.embed-wrap{margin-top:2.6rem;display:none}
-.embed-wrap.show{display:block;animation:fade .5s ease both}
-@keyframes fade{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.embed-cap{font-size:.88rem;color:var(--cocoa-muted);margin-bottom:.8rem}
-.embed-frame{overflow:hidden;border-radius:1.4rem;border:1px solid var(--soft-gray);background:var(--warm-white);box-shadow:var(--shadow-card)}
-.embed-frame iframe{display:block;width:100%;height:1400px;border:0}
-footer{text-align:center;color:var(--cocoa-muted);font-size:.84rem;padding:1rem 1.2rem 3rem}
-footer a{color:var(--cocoa-muted)}
-footer .links{display:flex;justify-content:center;gap:1.1rem;flex-wrap:wrap;margin-top:.5rem}
-.pen-sign{font-family:var(--pen);font-size:1.3rem;color:var(--rose-ink);margin-top:1rem}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+  body{font-family:'Gowun Dodum',system-ui,sans-serif;background:#FFF7F3;color:#6B4F43;
+    display:grid;place-items:center;min-height:100vh;margin:0;text-align:center;padding:2rem;line-height:1.7}
+  a{color:#C75A72}
 </style>
 </head>
 <body>
-<nav>
-  <img src="../assets/favicon.png" alt="" width="34" height="34">
-  <a class="wordmark" href="../">TappyType</a>
-  <div class="spacer"></div>
-  <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
-</nav>
-
-<main>
-  <img class="mascot" src="../assets/mascot-waving.png" alt="펜을 든 호랑이 마스코트 글범이" width="488" height="500">
-  <span class="eyebrow" data-i18n="eyebrow">iPad 전용 · AI 한글 폰트 메이커</span>
-  <h1 data-i18n-html="title">출시되면, <span class="pen">가장 먼저</span><br>알려드릴게요</h1>
-  <p class="lead" data-i18n="lead">애플펜슬로 쓴 손글씨를 나만의 한글 폰트로. 몇 글자만 써 보면 AI가 자연스러운 한글 폰트를 완성해요.</p>
-  <p class="sub" data-i18n="sub">출시 소식을 가장 먼저 받아보세요.</p>
-
-  <a class="cta" id="formBtn" href="https://jiin-seok.notion.site/37464a36d59e8091a34fc6f8f0b468a2" target="_blank" rel="noopener noreferrer">✍️ <span data-i18n="cta">신청 폼 열기</span></a>
-  <p class="hint" data-i18n="hint">인스타 앱에서 폼이 안 열리면 우측 상단 메뉴에서 외부 브라우저(Safari·Chrome)로 열어 주세요.</p>
-
-  <div class="embed-wrap" id="embedWrap">
-    <p class="embed-cap" data-i18n="embedCap">또는 아래에서 바로 작성하세요.</p>
-    <div class="embed-frame"><iframe id="embedFrame" title="TappyType 사전 신청 폼" allowfullscreen loading="lazy"></iframe></div>
-  </div>
-</main>
-
-<footer>
-  <div class="links">
-    <a href="../" data-i18n="home">← 홈으로 / Home</a>
-    <a href="https://www.instagram.com/tappytype/" target="_blank" rel="noopener">Instagram @tappytype</a>
-    <a href="../privacy/" data-i18n="privacy">개인정보 처리방침</a>
-  </div>
-  <div class="pen-sign" data-i18n="sign">곧 만나요 ✍️</div>
-</footer>
-
-<script>
-const NOTION_EMBED = 'https://jiin-seok.notion.site/ebd/37464a36d59e8091a34fc6f8f0b468a2';
-const I18N = {
-  ko: {
-    eyebrow:'iPad 전용 · AI 한글 폰트 메이커',
-    title:'출시되면, <span class="pen">가장 먼저</span><br>알려드릴게요',
-    lead:'애플펜슬로 쓴 손글씨를 나만의 한글 폰트로. 몇 글자만 써 보면 AI가 자연스러운 한글 폰트를 완성해요.',
-    sub:'출시 소식을 가장 먼저 받아보세요.',
-    cta:'신청 폼 열기',
-    hint:'인스타 앱에서 폼이 안 열리면 우측 상단 메뉴에서 외부 브라우저(Safari·Chrome)로 열어 주세요.',
-    embedCap:'또는 아래에서 바로 작성하세요.',
-    home:'← 홈으로 / Home', privacy:'개인정보 처리방침', sign:'곧 만나요 ✍️',
-  },
-  en: {
-    eyebrow:'iPad only · AI Korean Font Maker',
-    title:'We’ll tell you <span class="pen">first</span><br>when we launch',
-    lead:'Turn your Apple Pencil handwriting into your own Korean font. Write a few characters and AI completes a natural Korean typeface.',
-    sub:'Be the first to hear when we launch.',
-    cta:'Open the form',
-    hint:"If the form doesn't open inside the Instagram app, use the top-right menu to open it in your browser (Safari/Chrome).",
-    embedCap:'Or fill it out right here.',
-    home:'← Home', privacy:'Privacy Policy', sign:'See you soon ✍️',
-  }
-};
-const params = new URLSearchParams(location.search);
-let lang = params.get('lang') || localStorage.getItem('tt-lang') || (navigator.language.startsWith('ko') ? 'ko' : 'en');
-if (lang !== 'ko' && lang !== 'en') lang = 'ko';
-const langBtn = document.getElementById('langToggle');
-function applyLang(){
-  const d = I18N[lang];
-  document.documentElement.lang = lang;
-  langBtn.textContent = lang === 'ko' ? 'EN' : '한';
-  document.querySelectorAll('[data-i18n]').forEach(el => { const k = el.dataset.i18n; if (d[k]) el.textContent = d[k]; });
-  document.querySelectorAll('[data-i18n-html]').forEach(el => { const k = el.dataset.i18nHtml; if (d[k]) el.innerHTML = d[k]; });
-}
-langBtn.addEventListener('click', () => { lang = lang === 'ko' ? 'en' : 'ko'; localStorage.setItem('tt-lang', lang); applyLang(); });
-applyLang();
-
-// 데스크톱에서만 Notion iframe 생성 (모바일·인앱 브라우저는 새 탭 CTA로 유도 — 크로스도메인 쿠키 차단 회피)
-if (window.matchMedia('(min-width: 768px)').matches) {
-  document.getElementById('embedFrame').src = NOTION_EMBED;
-  document.getElementById('embedWrap').classList.add('show');
-}
-</script>
+  <p>TappyType이 출시됐어요. <a href="/#download">다운로드 페이지로 이동합니다…</a></p>
 </body>
 </html>
