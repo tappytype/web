@@ -32,6 +32,7 @@
   --serif:'Playfair Display',serif;
   --body:'Gowun Dodum',sans-serif;
   --pen:'Nanum Pen Script',cursive;
+  --pen-me:'TappyTypeSample','Nanum Pen Script',cursive;
   --shadow-card:0 2px 24px rgba(107,79,67,.09);
   --shadow-pop:0 12px 40px rgba(107,79,67,.14);
 }
@@ -143,7 +144,7 @@ nav a.plain:hover{background:var(--cream)}
 /* ───────── 공통 섹션 ───────── */
 section{max-width:1120px;margin:0 auto;padding:clamp(3rem,8vh,5.5rem) clamp(1.2rem,4vw,2.5rem)}
 .sec-label{
-  font-family:var(--pen);font-size:1.5rem;color:var(--rose-ink);display:block;margin-bottom:.4rem;
+  font-family:var(--pen-me);font-size:1.5rem;color:var(--rose-ink);display:block;margin-bottom:.4rem;
 }
 h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:400;line-height:1.4;letter-spacing:-.01em}
 .sec-sub{color:var(--cocoa-muted);margin-top:.7rem;max-width:36rem}
@@ -163,7 +164,7 @@ h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:400;line-height:1.4;letter-s
 }
 .gcell{
   aspect-ratio:1;border:1.5px dashed var(--soft-gray);border-radius:.9rem;
-  display:grid;place-items:center;font-family:var(--pen);font-size:2rem;
+  display:grid;place-items:center;font-family:var(--pen-me);font-size:2rem;
   color:transparent;background:transparent;transition:.3s;position:relative;
 }
 .gcell.hand{border-style:solid;border-color:var(--rose);background:var(--blush);color:var(--rose-ink)}
@@ -190,7 +191,7 @@ h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:400;line-height:1.4;letter-s
 }
 .ddalkkak-done.show{display:flex;animation:pop .5s cubic-bezier(.34,1.56,.64,1) both}
 .ddalkkak-done img{width:64px}
-.ddalkkak-done span{font-family:var(--pen);font-size:1.35rem;color:var(--lavender-ink)}
+.ddalkkak-done span{font-family:var(--pen-me);font-size:1.35rem;color:var(--lavender-ink)}
 
 /* ───────── 3단계 ───────── */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;margin-top:2.5rem}
@@ -238,7 +239,7 @@ h2{font-size:clamp(1.7rem,3.4vw,2.4rem);font-weight:400;line-height:1.4;letter-s
 .shot:nth-child(1) .tape{background:var(--rose);opacity:.55}
 .shot:nth-child(2) .tape{background:var(--lavender);opacity:.45;transform:translateX(-50%) rotate(2.5deg)}
 .shot figcaption{
-  font-family:var(--pen);font-size:1.3rem;color:var(--cocoa-muted);text-align:center;margin-top:1rem;
+  font-family:var(--pen-me);font-size:1.3rem;color:var(--cocoa-muted);text-align:center;margin-top:1rem;
 }
 
 /* ───────── 비디오 ───────── */
@@ -268,7 +269,7 @@ footer{
 footer .fbrand{font-family:var(--serif);font-weight:600;font-size:1.1rem;color:var(--cocoa);margin-bottom:.5rem}
 footer .links{display:flex;justify-content:center;gap:1.4rem;margin:.8rem 0 1rem;flex-wrap:wrap}
 footer a{color:var(--cocoa-muted)}
-footer .pen-sign{font-family:var(--pen);font-size:1.4rem;color:var(--rose-ink);margin-top:1.2rem}
+footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink);margin-top:1.2rem}
 
 /* ───────── 모션 축소 / 반응형 ───────── */
 @media (prefers-reduced-motion:reduce){
