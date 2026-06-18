@@ -501,21 +501,22 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
   <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
 </nav>
 
-<header class="hero">
 <section id="tester" class="reveal">
-  <span class="sec-label" data-i18n="tt_label">라이브 미리보기</span>
-  <h2 data-i18n="tt_title">쓰는 즉시, 문장이 내 글씨가 돼요</h2>
-  <div class="tester">
-    <div class="waterfall" id="waterfall" aria-live="polite">
-      <div class="wf-line s1">강물 바다 봄날 하늘</div>
-      <div class="wf-line s2">강물 바다 봄날 하늘</div>
-      <div class="wf-line s3">강물 바다 봄날 하늘</div>
+    <span class="sec-label" data-i18n="tt_label">라이브 미리보기</span>
+    <h2 data-i18n="tt_title">쓰는 즉시, 문장이 내 글씨가 돼요</h2>
+    <div class="tester">
+        <div class="waterfall" id="waterfall" aria-live="polite">
+            <div class="wf-line s1">강물 바다 봄날 하늘</div>
+            <div class="wf-line s2">강물 바다 봄날 하늘</div>
+            <div class="wf-line s3">강물 바다 봄날 하늘</div>
+        </div>
+        <input id="testerInput" type="text" maxlength="40" value="강물 바다 봄날 하늘" aria-label="미리보기 문장 입력">
+        <p class="note" data-i18n="tt_note">✍️ 이 글씨는 TappyType으로 만든 진짜 손글씨 폰트예요. 앱에서는 '내' 글씨가 이렇게 돼요.</p>
     </div>
-    <input id="testerInput" type="text" maxlength="40" value="강물 바다 봄날 하늘" aria-label="미리보기 문장 입력">
-    <p class="note" data-i18n="tt_note">✍️ 이 글씨는 TappyType으로 만든 진짜 손글씨 폰트예요. 앱에서는 '내' 글씨가 이렇게 돼요.</p>
-  </div>
+    <img class="hero-tappy" id="heroTappy" src="/assets/mascot-waving.png" alt="펜을 든 태피가 손을 흔들어요" width="488" height="500">
 </section>
 
+<header class="hero">
   <div class="hero-copy">
     <span class="eyebrow">✦ <span data-i18n="badge">내가 쓴 39글자 · 나머지 11,133자는 딸깍</span></span>
     <h1 class="morph" aria-label="내 손글씨가 진짜 폰트가 돼요">
@@ -523,7 +524,6 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
       <span class="m-line m-type" aria-hidden="true" data-i18n-html="h1_plain">내&nbsp;손글씨가<br>진짜&nbsp;폰트가&nbsp;돼요</span>
     </h1>
     <p class="sub" data-i18n="hero_sub">손가락이나 애플펜슬로 몇 글자만 쓰면, AI가 한글 11,172자를 내 글씨체로 채워요. 진짜 .ttf 폰트로 내보내 굿노트·프로크리에이트·키노트 어디서든.</p>
-
 
     <div class="hero-cta">
       <a class="appstore" href="https://apps.apple.com/us/app/tappytype/id6777860562" target="_blank" rel="noopener">
@@ -533,8 +533,6 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
       <a class="demo-link" href="#howto">▶ <span data-i18n="cta_demo">55초 데모 보기</span></a>
     </div>
     <p class="hero-universal">🍎 <span data-i18n="hero_universal">iPhone과 iPad 어디서나 · App Store에서 받을 수 있어요</span></p>
-      <img class="hero-tappy" id="heroTappy" src="/assets/mascot-waving.png" alt="펜을 든 태피가 손을 흔들어요" width="488" height="500">
-
   </div>
 
   <div class="hero-visual">
