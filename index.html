@@ -82,7 +82,6 @@
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 /* JS 사용자: 언어 적용 전까지 숨김(영어 사용자에게 한국어 깜빡임 방지). 무JS는 그대로 노출 */
-html.js:not(.i18n-ready) body{visibility:hidden}
 body{
   font-family:var(--body);color:var(--cocoa);background:var(--ivory);
   line-height:1.7;overflow-x:hidden;word-break:keep-all;
@@ -504,7 +503,7 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
 
 <header class="hero">
   <div class="hero-copy">
-    <span class="eyebrow">✦ <span data-i18n="badge">내가 쓴 6글자 · 나머지 11,166자는 딸깍</span></span>
+    <span class="eyebrow">✦ <span data-i18n="badge">내가 쓴 39글자 · 나머지 11,133자는 딸깍</span></span>
     <h1 class="morph" aria-label="내 손글씨가 진짜 폰트가 돼요">
       <span class="m-line m-hand" aria-hidden="true" data-i18n-html="h1_plain">내&nbsp;손글씨가<br>진짜&nbsp;폰트가&nbsp;돼요</span>
       <span class="m-line m-type" aria-hidden="true" data-i18n-html="h1_plain">내&nbsp;손글씨가<br>진짜&nbsp;폰트가&nbsp;돼요</span>
@@ -546,7 +545,7 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
     <div class="bignum">11,172</div>
     <div class="m-copy">
       <span class="sec-label" data-i18n="moment_label">딸깍 한 번의 일</span>
-      <h2 data-i18n="moment_title">한글은 11,172자. 6자만 쓰면, 나머지는 딸깍.</h2>
+      <h2 data-i18n="moment_title">한글은 11,172자. 39자만 쓰면, 나머지는 딸깍.</h2>
       <p class="sec-sub" data-i18n="moment_sub">전부 손으로 쓰는 건 불가능에 가까워요. 태피타입의 AI는 내가 쓴 몇 글자에서 글씨체를 배워, 안 쓴 글자를 같은 느낌으로 그려줘요.</p>
       <div class="counter" aria-hidden="true">
         <span class="from" id="cFrom">6</span>
@@ -767,7 +766,7 @@ const I18N = {
   ko: {
     nav_privacy:'개인정보 처리방침',
     ab_small:'App Store에서', ab_big:'다운로드',
-    badge:'내가 쓴 6글자 · 나머지 11,166자는 딸깍',
+    badge:'내가 쓴 39글자 · 나머지 11,133자는 딸깍',
     h1:`내&nbsp;<span class="hand">손글씨</span>가<br>진짜&nbsp;폰트가&nbsp;돼요`,
     h1_plain:`내&nbsp;손글씨가<br>진짜&nbsp;폰트가&nbsp;돼요`, name_label:'써보세요',
     name_default:'태피타입을 찾아주셔서 고마워요',
@@ -775,9 +774,9 @@ const I18N = {
     key_label:'딸깍', key_hint:'눌러서 채워보세요',
     cta_demo:'55초 데모 보기',
     hero_universal:'iPhone과 iPad 어디서나 · App Store에서 받을 수 있어요',
-    seed_label:'내가 쓴 6글자',
+    seed_label:'내가 쓴 39글자',
     moment_label:'딸깍 한 번의 일',
-    moment_title:'한글은 11,172자. 6자만 쓰면, 나머지는 딸깍.',
+    moment_title:'한글은 11,172자. 39자만 쓰면, 나머지는 딸깍.',
     moment_sub:'전부 손으로 쓰는 건 불가능에 가까워요. 태피타입의 AI는 내가 쓴 몇 글자에서 글씨체를 배워, 안 쓴 글자를 같은 느낌으로 그려줘요.',
     counter_unit:'자',
     how_label:'이렇게 만들어요', how_title:'설치하고, 쓰고, 딸깍하고, 내보내면 끝',
@@ -816,7 +815,7 @@ const I18N = {
   en: {
     nav_privacy:'Privacy Policy',
     ab_small:'Download on the', ab_big:'App Store',
-    badge:'Write 6 · the other 11,166 are one tap',
+    badge:'Write 39 · the other 11,133 are one tap',
     h1:`Your <span class="hand">handwriting</span>,<br>a real font`,
     h1_plain:`Your&nbsp;handwriting,<br>a&nbsp;real font`, name_label:'Try it here',
     name_default:'Thanks for finding TappyType',
@@ -824,9 +823,9 @@ const I18N = {
     key_label:'TapTap', key_hint:'press to fill it in',
     cta_demo:'Watch 55s demo',
     hero_universal:'On iPhone and iPad · available now on the App Store',
-    seed_label:'the 6 I wrote',
+    seed_label:'the 39 I wrote',
     moment_label:'what one tap does',
-    moment_title:'Korean has 11,172 syllables. Write 6 — the rest is one tap.',
+    moment_title:'Korean has 11,172 syllables. Write 39 — the rest is one tap.',
     moment_sub:'Writing them all by hand is nearly impossible. TappyType’s AI learns your style from the few you write and draws the rest to match.',
     counter_unit:'glyphs',
     how_label:'How it works', how_title:'Install, write, tap, export — done',
@@ -883,7 +882,7 @@ function setHeroFont(font){
 /* 한글 제목 의미 단위 줄바꿈: 아래 구(句)의 내부 공백을 nbsp로 바꿔 한 덩어리로 묶음.
    → word-break:keep-all 이 "의미 경계(일반 공백)"에서만 줄을 바꾼다. <br>과 달리 반응형. */
 const GLUE = {
-  moment_title:['한글은 11,172자.','6자만 쓰면,','나머지는 딸깍.'],
+  moment_title:['한글은 11,172자.','39자만 쓰면,','나머지는 딸깍.'],
   how_title:['내보내면 끝'],
   tt_title:['쓰는 즉시,','내 글씨가 돼요'],
   pv2_title:['내 폰트가,','일상 곳곳에'],
