@@ -286,7 +286,7 @@ html.js .reveal.visible{opacity:1;transform:none}
 .tester .note{font-size:.82rem;color:var(--cocoa-muted);margin-top:.9rem}
 
 /* ───────── Preview 갤러리 ───────── */
-.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(1.4rem,4vw,2.4rem);margin-top:2.4rem}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,3vw,2rem);margin-top:2.4rem}
 .frame-card{position:relative}
 .frame-card .pic{
   position:relative;border-radius:1.2rem;overflow:hidden;border:1px solid rgba(230,226,221,.8);
@@ -441,7 +441,6 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
   .counter{justify-content:center}
   .stories{grid-template-columns:repeat(2,1fr)}
   .gallery{grid-template-columns:1fr}
-  .gallery .frame-card:nth-child(n+3){display:none} /* 사진 들어오기 전: 모바일은 2개만 */
   .privacy-band{grid-template-columns:1fr;text-align:center;justify-items:center}
   .privacy-band img{width:clamp(96px,28vw,140px)}
   .privacy-band li{text-align:left}
@@ -619,18 +618,13 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
     </figure>
     <figure class="frame-card">
       <span class="tape"></span>
-      <div class="pic"><img src="/assets/use-1.jpg" alt="굿노트 캘린더에 내 손글씨 폰트로 꾸민 모습" loading="lazy" width="750" height="1000"></div>
-      <figcaption data-i18n="pv2_cap2">굿노트 캘린더</figcaption>
+      <div class="pic"><img src="/assets/use-vanity.jpg" alt="화장대에서 손글씨 무드를 즐기는 태피" loading="lazy" width="750" height="1000"></div>
+      <figcaption data-i18n="pv2_cap2">오늘의 화장대</figcaption>
     </figure>
     <figure class="frame-card">
       <span class="tape"></span>
-      <div class="pic"><img src="/assets/use-2.jpg" alt="먼슬리 플래너에 내 손글씨 폰트로 적은 메모" loading="lazy" width="750" height="1000"></div>
-      <figcaption data-i18n="pv2_cap3">손글씨 먼슬리</figcaption>
-    </figure>
-    <figure class="frame-card">
-      <span class="tape"></span>
-      <div class="pic"><img src="/assets/use-3.jpg" alt="디지털 플래너를 내 손글씨 폰트로 꾸민 모습" loading="lazy" width="750" height="1000"></div>
-      <figcaption data-i18n="pv2_cap4">플래너 꾸미기</figcaption>
+      <div class="pic"><img src="/assets/story-typing.jpg" alt="태피가 한글을 손글씨로 채우는 한글 매직" loading="lazy" width="900" height="1205"></div>
+      <figcaption data-i18n="pv2_cap3">한글 매직 ✨</figcaption>
     </figure>
   </div>
 </section>
@@ -783,9 +777,9 @@ const I18N = {
     mk_jiin:'기획·디자인부터 앱과 이 사이트까지, 사용자 손에 닿는 모든 걸 만들어요.', mk_jiin_link:'→ 포트폴리오',
     mk_bobae:'컴퓨터 비전에 빠지면서 ML을 시작했습니다. 3년 넘게 정형 데이터 분류부터 생성형 AI, LLM 파이프라인까지 다양한 프로덕션 시스템을 만들어왔지만, 늘 같은 질문을 던졌습니다 — 이 모델이 실제로 사용자에게 어떤 도움이 될까. 이번 프로젝트의 답은 꽤 즐거운데요: 손글씨를 읽어내고, 그걸 나만의 폰트로 만들어주는 모델을 만드는 일이니까요.',
     pv2_label:'이렇게 써요', pv2_title:'완성된 내 폰트가, 일상 곳곳에',
-    pv2_sub:'굿노트·디지털 플래너를 내 글씨체 폰트로 꾸민 진짜 예시예요.',
+    pv2_sub:'손글씨가 일상이 되는 순간들 — 다이어리부터 한글 매직까지.',
     pv2_soon:'예시 사진 준비 중',
-    pv2_cap1:'굿노트 다이어리', pv2_cap2:'굿노트 캘린더', pv2_cap3:'손글씨 먼슬리', pv2_cap4:'플래너 꾸미기',
+    pv2_cap1:'굿노트 다이어리', pv2_cap2:'오늘의 화장대', pv2_cap3:'한글 매직 ✨',
     pv_label:'내 데이터는 내 기기에', pv_title:'계정도, 광고도, 추적도 없어요',
     pv_li1:'쓰기, 미리보기, 폰트 만들기까지 전부 내 기기 안에서 끝나요.',
     pv_li2:'AI 딸깍을 쓸 때만 손글씨 이미지가 서버로 전송되고, 처리 직후 바로 삭제돼요 — 저장하지 않아요.',
@@ -831,9 +825,9 @@ const I18N = {
     mk_jiin:'From design to the app to this very site — everything that reaches your hands.', mk_jiin_link:'→ Portfolio',
     mk_bobae:'Computer vision is what got me into ML; 3+ years of production systems later — tabular classifiers, generative AI, LLM pipelines — I still care most about what a model does for the person using it. Here, that\'s something genuinely fun: teaching a model to read your 손글씨 and turn it into a font that\'s actually yours.',
     pv2_label:'In real use', pv2_title:'Your finished font, all over daily life',
-    pv2_sub:'Real examples — my handwriting font in GoodNotes and digital planners.',
+    pv2_sub:'Little moments where handwriting becomes everyday — from diaries to Hangul Magic.',
     pv2_soon:'sample photo coming',
-    pv2_cap1:'GoodNotes diary', pv2_cap2:'GoodNotes calendar', pv2_cap3:'Monthly notes', pv2_cap4:'Planner decor',
+    pv2_cap1:'GoodNotes diary', pv2_cap2:'At the vanity', pv2_cap3:'Hangul Magic ✨',
     pv_label:'Your data stays yours', pv_title:'No accounts, no ads, no tracking',
     pv_li1:'Writing, preview, and font building all happen on your device.',
     pv_li2:'Only when you use AI Tap, handwriting images are sent to our server — processed and immediately discarded, never stored.',
