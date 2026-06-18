@@ -369,15 +369,25 @@ html.js .reveal.visible{opacity:1;transform:none}
 .f3{font-family:'Jiin2606061',var(--pen)}
 .f5{font-family:'Jiin2606151',var(--pen)}
 
-/* ───────── 만든 이의 편지 ───────── */
-#founder{text-align:center}
-.letter{max-width:660px;margin:2.2rem auto 0;text-align:left;background:var(--warm-white);border:1px solid var(--soft-gray);border-radius:1.8rem;padding:clamp(1.8rem,4.5vw,3.2rem);box-shadow:var(--shadow-card);font-size:1.04rem;line-height:1.95;color:var(--cocoa)}
-.letter p{margin-bottom:1.05rem}
-.letter p:last-of-type{margin-bottom:0}
-.letter .hook{font-family:var(--pen-me);font-size:clamp(1.8rem,4.5vw,2.3rem);color:var(--rose-ink);line-height:1.3;margin-bottom:1.3rem}
-.letter .han{font-weight:600;color:var(--rose-ink)}
-.letter .sign{font-family:var(--pen-me);font-size:1.5rem;color:var(--lavender-ink);margin-top:1.6rem;text-align:right}
+/* ───────── 만든 이의 이야기 (스크롤 내러티브) ───────── */
+#founder{max-width:920px;text-align:center}
+.story-hook{font-family:var(--pen-me);font-size:clamp(2rem,5.5vw,2.9rem);color:var(--rose-ink);line-height:1.3;margin-top:1.2rem}
+.story-intro{max-width:34rem;margin:1rem auto 0;color:var(--cocoa-muted);font-size:1.08rem;line-height:1.8}
+.story-scenes{display:flex;flex-direction:column;gap:clamp(2.2rem,6vw,4rem);margin-top:clamp(2.4rem,6vw,3.8rem);text-align:left}
+.scene{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,4vw,2.8rem);align-items:center}
+.scene.reverse .scene-img{order:2}
+.scene-img{margin:0}
+.scene-img img{width:100%;border-radius:1.4rem;box-shadow:var(--shadow-pop);border:1px solid var(--soft-gray)}
+.scene-img figcaption{font-family:var(--pen-me);font-size:1.1rem;color:var(--cocoa-muted);text-align:center;margin-top:.6rem}
+.scene-text p{font-size:1.05rem;line-height:1.9;color:var(--cocoa)}
+.scene-text p + p{margin-top:1rem}
+.scene .han{font-weight:600;color:var(--rose-ink)}
+.scene.wide{grid-template-columns:1fr;gap:1.2rem;max-width:780px;margin:0 auto;text-align:center}
+.scene.wide .scene-text p{text-align:left}
+.story-outro{max-width:34rem;margin:clamp(2.4rem,6vw,3.8rem) auto 0;color:var(--cocoa);font-size:1.05rem;line-height:1.9}
+.story-sign{font-family:var(--pen-me);font-size:1.5rem;color:var(--lavender-ink);margin-top:1rem}
 .story-link{display:inline-block;margin-top:1.4rem;font-size:.92rem}
+@media (max-width:760px){.scene{grid-template-columns:1fr}.scene.reverse .scene-img{order:0}.scene-img img{max-width:420px;margin:0 auto}}
 
 /* ───────── 만든 사람 ───────── */
 #makers{text-align:center}
@@ -640,16 +650,35 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
 <section id="founder" class="reveal">
   <span class="sec-label" data-i18n="st_label">만든 이의 이야기</span>
   <h2 data-i18n="st_title">손글씨를 진짜 폰트로 만들기까지</h2>
-  <blockquote class="letter">
-    <p class="hook">Do you like typography?</p>
-    <p>Since I was a little girl, I&rsquo;ve loved typography. Sometimes I dreamed of turning my handwriting into a font.</p>
-    <p>Today, thanks to AI, we can do almost anything in the digital world. For my dream of making my own font, I decided to build an iPad app that easily creates letter image files.</p>
-    <p>However, there&rsquo;s still a challenge because of the unique properties of the Korean character <span class="han">한글</span>. I need to write out each letter for the 11,172 possible character combinations (at least 2350). If not, you will see the clumsy letter like the second pic. Neither the Apple Pencil nor NanoBanana can solve this problem.</p>
-    <p>I set aside my ideas and searched the internet until I found six-year-old open-source code (quite old in the AI field). I immediately started experimenting to speed up the process. In the end, my dream became a reality.</p>
-    <p>Because I want to share this experience with others, I designed, coded, and tested it myself. Now, I have a team member who will rebuild and upgrade the AI model. So, I started to prepare the App Store documents and do some PR! (yeah, that&rsquo;s what this is)</p>
-    <p>From now on, I will share my story about the first launch and my very first app. I hope it works, but even if it doesn&rsquo;t, my enthusiasm and heartfelt thoughts or actions for this first attempt are still worth recording. It&rsquo;s also a personal test to see if I want to be an entrepreneur.</p>
-    <p class="sign">&mdash; Jiin, TappyType</p>
-  </blockquote>
+  <p class="story-hook">Do you like typography?</p>
+  <p class="story-intro">Since I was a little girl, I&rsquo;ve loved typography. Sometimes I dreamed of turning my handwriting into a font.</p>
+
+  <div class="story-scenes">
+    <div class="scene">
+      <div class="scene-img"><img src="/assets/story-typing.jpg" alt="태피가 아이패드에서 한글을 채우는 일러스트" loading="lazy" width="900" height="1205"></div>
+      <div class="scene-text">
+        <p>Today, thanks to AI, we can do almost anything in the digital world. For my dream of making my own font, I decided to build an iPad app that easily creates letter image files.</p>
+      </div>
+    </div>
+
+    <div class="scene wide">
+      <div class="scene-text">
+        <p>However, there&rsquo;s still a challenge because of the unique properties of the Korean character <span class="han">한글</span>. I need to write out each letter for the 11,172 possible character combinations (at least 2350). If not, you will see clumsy letters. Neither the Apple Pencil nor NanoBanana can solve this problem.</p>
+      </div>
+      <figure class="scene-img"><img src="/assets/story-result.png" alt="내가 쓴 몇 글자에서 AI가 나머지를 채운 결과 비교" loading="lazy" width="1200" height="142"><figcaption>위: 내가 쓴 글자 · 아래: AI가 채운 결과</figcaption></figure>
+    </div>
+
+    <div class="scene reverse">
+      <div class="scene-img"><img src="/assets/shot-main.png" alt="태피타입 편집 화면" loading="lazy" width="750" height="1000"></div>
+      <div class="scene-text">
+        <p>I set aside my ideas and searched the internet until I found six-year-old open-source code (quite old in the AI field). I immediately started experimenting to speed up the process. In the end, my dream became a reality.</p>
+        <p>Because I want to share this experience with others, I designed, coded, and tested it myself. Now, I have a team member who will rebuild and upgrade the AI model. So, I started to prepare the App Store documents and do some PR! (yeah, that&rsquo;s what this is)</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="story-outro">From now on, I will share my story about the first launch and my very first app. I hope it works, but even if it doesn&rsquo;t, my enthusiasm and heartfelt thoughts or actions for this first attempt are still worth recording. It&rsquo;s also a personal test to see if I want to be an entrepreneur.</p>
+  <p class="story-sign">&mdash; Jiin, TappyType</p>
   <a class="story-link" href="https://www.instagram.com/tappytype/" target="_blank" rel="noopener" data-i18n="st_link">📷 Instagram에서 더 보기 @tappytype</a>
 </section>
 
