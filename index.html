@@ -253,7 +253,7 @@ html.js .reveal.visible{opacity:1;transform:none}
   position:relative;aspect-ratio:9/16;background:linear-gradient(160deg,var(--cream),var(--lavender-tint));
   display:grid;place-items:center;overflow:hidden;
 }
-.story .frame img{width:100%;height:100%;object-fit:cover}
+.story .frame img,.story .frame .frame-vid{width:100%;height:100%;object-fit:cover}
 .story .frame .step-no{
   position:absolute;top:.6rem;left:.7rem;z-index:2;
   font-family:var(--serif);font-weight:700;font-size:1.05rem;color:#fff;
@@ -568,14 +568,14 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
     <figure class="story">
       <div class="frame">
         <span class="step-no">3</span>
-        <span class="soon"><span class="ic">✨</span><span data-i18n-html="step3_soon">AI 딸깍 클립<br>곧 공개</span></span>
+        <video class="frame-vid" autoplay muted loop playsinline preload="metadata" poster="/assets/howto-fill-poster.jpg" aria-label="AI가 손글씨를 채우는 데모"><source src="/assets/howto-fill.mp4" type="video/mp4"></video>
       </div>
       <figcaption class="body"><h3 data-i18n="step3_t">AI 딸깍</h3><p data-i18n="step3_p">기본 글자를 다 쓰면, 딸깍 한 번에 나머지 한글이 전부 내 글씨체로 채워져요.</p></figcaption>
     </figure>
     <figure class="story">
       <div class="frame">
         <span class="step-no">4</span>
-        <span class="soon"><span class="ic">📤</span><span data-i18n-html="step4_soon">.ttf 내보내기<br>곧 공개</span></span>
+        <img src="/assets/howto-export.jpg" alt="내보낸 폰트가 굿노트 서체 목록에 나타난 모습" loading="lazy" width="540" height="960">
       </div>
       <figcaption class="body"><h3 data-i18n="step4_t">.ttf로 내보내기</h3><p data-i18n="step4_p">진짜 폰트 파일이에요. 굿노트, 프로크리에이트, 키노트, 워드 — 폰트를 쓰는 곳이라면 어디든.</p></figcaption>
     </figure>
