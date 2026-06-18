@@ -167,7 +167,7 @@ nav a.plain:hover{background:var(--cream)}
 .key-row{display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1.4rem}
 .keycap{
   --kc:#b9a4d9;
-  font-family:var(--body);font-size:1.4rem;font-weight:600;letter-spacing:.04em;
+  font-family:serif,var(--body);font-size:1.4rem;font-weight:600;letter-spacing:.04em;
   color:#fff;cursor:pointer;border:none;border-radius:1.1rem;padding:.85rem 1.7rem;position:relative;
   background:linear-gradient(180deg,#cdbbe6,var(--kc));
   box-shadow:0 7px 0 #8f78b8, 0 14px 24px rgba(110,87,159,.34);
@@ -502,6 +502,20 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
 </nav>
 
 <header class="hero">
+<section id="tester" class="reveal">
+  <span class="sec-label" data-i18n="tt_label">라이브 미리보기</span>
+  <h2 data-i18n="tt_title">쓰는 즉시, 문장이 내 글씨가 돼요</h2>
+  <div class="tester">
+    <div class="waterfall" id="waterfall" aria-live="polite">
+      <div class="wf-line s1">강물 바다 봄날 하늘</div>
+      <div class="wf-line s2">강물 바다 봄날 하늘</div>
+      <div class="wf-line s3">강물 바다 봄날 하늘</div>
+    </div>
+    <input id="testerInput" type="text" maxlength="40" value="강물 바다 봄날 하늘" aria-label="미리보기 문장 입력">
+    <p class="note" data-i18n="tt_note">✍️ 이 글씨는 TappyType으로 만든 진짜 손글씨 폰트예요. 앱에서는 '내' 글씨가 이렇게 돼요.</p>
+  </div>
+</section>
+
   <div class="hero-copy">
     <span class="eyebrow">✦ <span data-i18n="badge">내가 쓴 39글자 · 나머지 11,133자는 딸깍</span></span>
     <h1 class="morph" aria-label="내 손글씨가 진짜 폰트가 돼요">
@@ -600,19 +614,7 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
   </div>
 </section>
 
-<section id="tester" class="reveal">
-  <span class="sec-label" data-i18n="tt_label">라이브 미리보기</span>
-  <h2 data-i18n="tt_title">쓰는 즉시, 문장이 내 글씨가 돼요</h2>
-  <div class="tester">
-    <div class="waterfall" id="waterfall" aria-live="polite">
-      <div class="wf-line s1">강물 바다 봄날 하늘</div>
-      <div class="wf-line s2">강물 바다 봄날 하늘</div>
-      <div class="wf-line s3">강물 바다 봄날 하늘</div>
-    </div>
-    <input id="testerInput" type="text" maxlength="40" value="강물 바다 봄날 하늘" aria-label="미리보기 문장 입력">
-    <p class="note" data-i18n="tt_note">✍️ 이 글씨는 TappyType으로 만든 진짜 손글씨 폰트예요. 앱에서는 '내' 글씨가 이렇게 돼요.</p>
-  </div>
-</section>
+
 
 <section id="fonts" class="reveal">
   <span class="sec-label" data-i18n="fg_label">진짜 폰트</span>
