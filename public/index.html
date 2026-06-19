@@ -269,7 +269,7 @@ html.js .reveal.visible{opacity:1;transform:none}
 
 /* ───────── 라이브 미리보기 (워터폴) ───────── */
 .tester{
-  margin-top:2.2rem;background:var(--warm-white);border:1px solid var(--soft-gray);
+  background:var(--warm-white);border:1px solid var(--soft-gray);
   border-radius:1.8rem;padding:clamp(1.4rem,3.5vw,2.4rem);box-shadow:var(--shadow-card);
 }
 .waterfall{display:grid;gap:.2rem;margin-bottom:1.3rem}
@@ -288,7 +288,7 @@ html.js .reveal.visible{opacity:1;transform:none}
 .tester .note{font-size:.82rem;color:var(--cocoa-muted);margin-top:.9rem}
 
 /* ───────── Preview 갤러리 ───────── */
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(1.2rem,3vw,2rem);margin-top:2.4rem}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(1.2rem,3vw,2rem);margin-top:2.4rem;max-width:560px;margin-inline:auto}
 .frame-card{position:relative}
 .frame-card .pic{
   position:relative;border-radius:1.2rem;overflow:hidden;border:1px solid rgba(230,226,221,.8);
@@ -416,13 +416,16 @@ html.js .reveal.visible{opacity:1;transform:none}
 .creator-note .sec-sub{margin-left:auto;margin-right:auto;max-width:32rem}
 .creator-note a{font-size:.92rem;display:inline-block;margin-top:1.2rem}
 #makers{text-align:center}
-.makers-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,4vw,2.6rem);margin-top:2.4rem}
-.maker-card{background:var(--warm-white);border:1px solid var(--soft-gray);border-radius:1.6rem;padding:clamp(1.6rem,4vw,2.4rem);box-shadow:var(--shadow-card);display:flex;flex-direction:column;align-items:center;text-align:center}
-.maker-card .doodle img{height:clamp(132px,17vw,168px);width:auto;filter:drop-shadow(0 8px 18px rgba(90,65,54,.16))}
-.maker-card .m-name{font-size:1.15rem;font-weight:400;margin:.85rem 0 .35rem;color:var(--cocoa)}
-.maker-card .m-note{font-size:.95rem;color:var(--cocoa-muted);line-height:1.75;margin-bottom:1.1rem;text-wrap:pretty}
-.maker-card a{font-size:.9rem;margin-top:auto}
-@media (max-width:840px){.makers-grid{grid-template-columns:1fr;gap:1.2rem}}
+.makers-grid{display:grid;grid-template-columns:1fr;gap:clamp(1.2rem,3vw,1.8rem);margin-top:2.4rem;max-width:760px;margin-inline:auto}
+.maker-card{background:var(--warm-white);border:1px solid var(--soft-gray);border-radius:1.6rem;padding:clamp(1.5rem,4vw,2.2rem);box-shadow:var(--shadow-card);display:flex;flex-direction:row;align-items:center;gap:clamp(1.3rem,4vw,2.2rem);text-align:left}
+.maker-card .doodle{flex:0 0 auto}
+.maker-card .doodle img{height:clamp(116px,15vw,150px);width:auto;filter:drop-shadow(0 8px 18px rgba(90,65,54,.16))}
+.maker-body{flex:1;min-width:0;display:flex;flex-direction:column}
+.maker-card .m-name{font-size:1.15rem;font-weight:400;margin:0 0 .4rem;color:var(--cocoa)}
+.maker-card .m-note{font-size:.95rem;color:var(--cocoa-muted);line-height:1.75;margin-bottom:.9rem;text-wrap:pretty}
+.maker-card a{font-size:.9rem}
+.maker-card.reverse{flex-direction:row-reverse}
+@media (max-width:560px){.maker-card,.maker-card.reverse{flex-direction:column;align-items:center;text-align:center;gap:1rem}.maker-body{align-items:center}}
 /* ───────── 인스타 피드(Behold) ───────── */
 #insta{text-align:center}
 .insta-embed{margin-top:2rem}
@@ -501,28 +504,10 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
   <button class="lang-toggle" id="langToggle" aria-label="Switch language">EN</button>
 </nav>
 
-<section id="tester" class="reveal">
-    <span class="sec-label" data-i18n="tt_label">라이브 미리보기</span>
-    <h2 data-i18n="tt_title">쓰는 즉시, 문장이 내 글씨가 돼요</h2>
-    <div class="tester">
-        <div class="waterfall" id="waterfall" aria-live="polite">
-            <div class="wf-line s1">강물 바다 봄날 하늘</div>
-            <div class="wf-line s2">강물 바다 봄날 하늘</div>
-            <div class="wf-line s3">강물 바다 봄날 하늘</div>
-        </div>
-        <input id="testerInput" type="text" maxlength="40" value="강물 바다 봄날 하늘" aria-label="미리보기 문장 입력">
-        <p class="note" data-i18n="tt_note">✍️ 이 글씨는 TappyType으로 만든 진짜 손글씨 폰트예요. 앱에서는 '내' 글씨가 이렇게 돼요.</p>
-    </div>
-    <img class="hero-tappy" id="heroTappy" src="/assets/mascot-waving.png" alt="펜을 든 태피가 손을 흔들어요" width="488" height="500">
-</section>
-
 <header class="hero">
   <div class="hero-copy">
     <span class="eyebrow">✦ <span data-i18n="badge">내가 쓴 39글자 · 나머지 11,133자는 딸깍</span></span>
-    <h1 class="morph" aria-label="내 손글씨가 진짜 폰트가 돼요">
-      <span class="m-line m-hand" aria-hidden="true" data-i18n-html="h1_plain">내&nbsp;손글씨가<br>진짜&nbsp;폰트가&nbsp;돼요</span>
-      <span class="m-line m-type" aria-hidden="true" data-i18n-html="h1_plain">내&nbsp;손글씨가<br>진짜&nbsp;폰트가&nbsp;돼요</span>
-    </h1>
+    <h1 data-i18n-html="h1_plain">내&nbsp;손글씨가<br>진짜&nbsp;폰트가&nbsp;돼요</h1>
     <p class="sub" data-i18n="hero_sub">손가락이나 애플펜슬로 몇 글자만 쓰면, AI가 한글 11,172자를 내 글씨체로 채워요. 진짜 .ttf 폰트로 내보내 굿노트·프로크리에이트·키노트 어디서든.</p>
 
     <div class="hero-cta">
@@ -536,19 +521,17 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
   </div>
 
   <div class="hero-visual">
-    <span class="sparkle sp1">✦</span>
-    <span class="sparkle sp2">✧</span>
-    <span class="sparkle sp3">✦</span>
-    <div class="sheet sheet-name hidden">
-      <span class="seed-label">✎ <span data-i18n="name_label">써보세요</span></span>
-      <div class="font-picker" role="group" aria-label="글씨체 선택">
-        <button type="button" class="font-chip" data-font="dotom" aria-pressed="true" data-i18n="fg_d1">도톰체</button>
-        <button type="button" class="font-chip" data-font="ttobak" aria-pressed="false" data-i18n="fg_d3">또박체</button>
-        <button type="button" class="font-chip" data-font="santteut" aria-pressed="false" data-i18n="fg_d5">산뜻체</button>
+    <div class="tester">
+      <span class="sec-label" data-i18n="tt_label">라이브 미리보기</span>
+      <div class="waterfall" id="waterfall" aria-live="polite">
+        <div class="wf-line s1">강물 바다 봄날 하늘</div>
+        <div class="wf-line s2">강물 바다 봄날 하늘</div>
+        <div class="wf-line s3">강물 바다 봄날 하늘</div>
       </div>
-      <div class="name-render font-dotom" id="nameRender">태피타입을 찾아주셔서 고마워요</div>
-      <input id="nameInput" class="name-input" value="태피타입을 찾아주셔서 고마워요" maxlength="32" aria-label="미리보기 문구 입력" autocomplete="off" spellcheck="false">
+      <input id="testerInput" type="text" maxlength="40" value="강물 바다 봄날 하늘" aria-label="미리보기 문장 입력">
+      <p class="note" data-i18n="tt_note">✍️ 이 글씨는 TappyType으로 만든 진짜 손글씨 폰트예요. 앱에서는 '내' 글씨가 이렇게 돼요.</p>
     </div>
+    <img class="hero-tappy" id="heroTappy" src="/assets/mascot-waving.png" alt="펜을 든 태피가 손을 흔들어요" width="488" height="500">
   </div>
 </header>
 
@@ -633,18 +616,13 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
   <div class="gallery">
     <figure class="frame-card">
       <span class="tape"></span>
-      <div class="pic"><img src="/assets/preview-planner.jpg" alt="태피가 아이패드 디지털 플래너에 손글씨로 꾸민 모습" loading="lazy" width="821" height="1100"></div>
-      <figcaption data-i18n="pv2_cap1">굿노트 다이어리</figcaption>
+      <div class="pic"><img src="/assets/preview-planner.jpg" alt="아이패드 캘린더에 내 손글씨 폰트로 일정을 쓴 모습" loading="lazy" width="821" height="1100"></div>
+      <figcaption data-i18n="pv2_cap1">아이패드 캘린더</figcaption>
     </figure>
     <figure class="frame-card">
       <span class="tape"></span>
-      <div class="pic"><img src="/assets/use-vanity.jpg" alt="화장대에서 손글씨 무드를 즐기는 태피" loading="lazy" width="750" height="1000"></div>
-      <figcaption data-i18n="pv2_cap2">오늘의 화장대</figcaption>
-    </figure>
-    <figure class="frame-card">
-      <span class="tape"></span>
-      <div class="pic"><img src="/assets/story-typing.jpg" alt="태피가 한글을 손글씨로 채우는 한글 매직" loading="lazy" width="900" height="1205"></div>
-      <figcaption data-i18n="pv2_cap3">한글 매직 ✨</figcaption>
+      <div class="pic"><img src="/assets/use-make.jpg" alt="태피가 아이패드 TappyType 앱에서 손글씨로 글자를 만드는 모습" loading="lazy" width="818" height="1095"></div>
+      <figcaption data-i18n="pv2_cap2">앱에서 내 손글씨로</figcaption>
     </figure>
   </div>
 </section>
@@ -673,7 +651,7 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
 
   <div class="story-scenes">
     <div class="scene">
-      <div class="scene-img"><img src="/assets/story-typing.jpg" alt="태피가 아이패드에서 한글을 채우는 일러스트" loading="lazy" width="900" height="1205"></div>
+      <div class="scene-img"><img src="/assets/shot-onboarding.png" alt="태피타입 앱 온보딩 화면" loading="lazy" width="750" height="1000"></div>
       <div class="scene-text">
         <p>Today, thanks to AI, we can do almost anything in the digital world. For my dream of making my own font, I decided to build an iPad app that easily creates letter image files.</p>
       </div>
@@ -706,15 +684,19 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
   <div class="makers-grid">
     <article class="maker-card">
       <span class="doodle"><img src="/assets/creator-jiin.png" alt="석지인 도트 캐릭터" width="612" height="551" loading="lazy"></span>
-      <h3 class="m-name">석지인 · Jiin</h3>
-      <p class="m-note" data-i18n="mk_jiin">기획·디자인부터 앱과 이 사이트까지, 사용자 손에 닿는 모든 걸 만들어요.</p>
-      <a href="https://usejiin.link" target="_blank" rel="noopener" data-i18n="mk_jiin_link">→ 포트폴리오</a>
+      <div class="maker-body">
+        <h3 class="m-name">석지인 · Jiin</h3>
+        <p class="m-note" data-i18n="mk_jiin">기획·디자인부터 앱과 이 사이트까지, 사용자 손에 닿는 모든 걸 만들어요.</p>
+        <a href="https://usejiin.link" target="_blank" rel="noopener">→ usejiin.link</a>
+      </div>
     </article>
-    <article class="maker-card">
+    <article class="maker-card reverse">
       <span class="doodle"><img src="/assets/creator-bobae.png" alt="전보배 도트 캐릭터" width="624" height="600" loading="lazy"></span>
-      <h3 class="m-name">전보배 · Bobae</h3>
-      <p class="m-note" data-i18n="mk_bobae">컴퓨터 비전에 빠지면서 ML을 시작했습니다. 3년 넘게 정형 데이터 분류부터 생성형 AI, LLM 파이프라인까지 다양한 프로덕션 시스템을 만들어왔지만, 늘 같은 질문을 던졌습니다 — 이 모델이 실제로 사용자에게 어떤 도움이 될까. 이번 프로젝트의 답은 꽤 즐거운데요: 손글씨를 읽어내고, 그걸 나만의 폰트로 만들어주는 모델을 만드는 일이니까요.</p>
-      <a href="https://bobaejeon.github.io" target="_blank" rel="noopener">→ bobaejeon.github.io</a>
+      <div class="maker-body">
+        <h3 class="m-name">전보배 · Bobae</h3>
+        <p class="m-note" data-i18n="mk_bobae">컴퓨터 비전에 빠지면서 ML을 시작했습니다. 3년 넘게 정형 데이터 분류부터 생성형 AI, LLM 파이프라인까지 다양한 프로덕션 시스템을 만들어왔지만, 늘 같은 질문을 던졌습니다 — 이 모델이 실제로 사용자에게 어떤 도움이 될까. 이번 프로젝트의 답은 꽤 즐거운데요: 손글씨를 읽어내고, 그걸 나만의 폰트로 만들어주는 모델을 만드는 일이니까요.</p>
+        <a href="https://bobaejeon.github.io" target="_blank" rel="noopener">→ bobaejeon.github.io</a>
+      </div>
     </article>
   </div>
 </section>
@@ -798,9 +780,9 @@ const I18N = {
     mk_jiin:'기획·디자인부터 앱과 이 사이트까지, 사용자 손에 닿는 모든 걸 만들어요.', mk_jiin_link:'→ 포트폴리오',
     mk_bobae:'컴퓨터 비전에 빠지면서 ML을 시작했습니다. 3년 넘게 정형 데이터 분류부터 생성형 AI, LLM 파이프라인까지 다양한 프로덕션 시스템을 만들어왔지만, 늘 같은 질문을 던졌습니다 — 이 모델이 실제로 사용자에게 어떤 도움이 될까. 이번 프로젝트의 답은 꽤 즐거운데요: 손글씨를 읽어내고, 그걸 나만의 폰트로 만들어주는 모델을 만드는 일이니까요.',
     pv2_label:'이렇게 써요', pv2_title:'완성된 내 폰트가, 일상 곳곳에',
-    pv2_sub:'손글씨가 일상이 되는 순간들 — 다이어리부터 한글 매직까지.',
+    pv2_sub:'손글씨가 일상이 되는 순간들 — 아이패드 캘린더부터 앱에서 직접 쓰는 순간까지.',
     pv2_soon:'예시 사진 준비 중',
-    pv2_cap1:'굿노트 다이어리', pv2_cap2:'오늘의 화장대', pv2_cap3:'한글 매직 ✨',
+    pv2_cap1:'아이패드 캘린더', pv2_cap2:'앱에서 내 손글씨로',
     pv_label:'내 데이터는 내 기기에', pv_title:'계정도, 광고도, 추적도 없어요',
     pv_li1:'쓰기, 미리보기, 폰트 만들기까지 전부 내 기기 안에서 끝나요.',
     pv_li2:'AI 딸깍을 쓸 때만 손글씨 이미지가 서버로 전송되고, 처리 직후 바로 삭제돼요 — 저장하지 않아요.',
@@ -847,9 +829,9 @@ const I18N = {
     mk_jiin:'From design to the app to this very site — everything that reaches your hands.', mk_jiin_link:'→ Portfolio',
     mk_bobae:'Computer vision is what got me into ML; 3+ years of production systems later — tabular classifiers, generative AI, LLM pipelines — I still care most about what a model does for the person using it. Here, that\'s something genuinely fun: teaching a model to read your 손글씨 and turn it into a font that\'s actually yours.',
     pv2_label:'In real use', pv2_title:'Your finished font, all over daily life',
-    pv2_sub:'Little moments where handwriting becomes everyday — from diaries to Hangul Magic.',
+    pv2_sub:'Little moments where handwriting becomes everyday — from the iPad calendar to writing right in the app.',
     pv2_soon:'sample photo coming',
-    pv2_cap1:'GoodNotes diary', pv2_cap2:'At the vanity', pv2_cap3:'Hangul Magic ✨',
+    pv2_cap1:'iPad calendar', pv2_cap2:'In the app, my hand',
     pv_label:'Your data stays yours', pv_title:'No accounts, no ads, no tracking',
     pv_li1:'Writing, preview, and font building all happen on your device.',
     pv_li2:'Only when you use AI Tap, handwriting images are sent to our server — processed and immediately discarded, never stored.',
@@ -868,17 +850,7 @@ let lang = window.__ttLang || 'ko';
 const langBtn = document.getElementById('langToggle');
 const tIn = document.getElementById('testerInput');
 const wfLines = document.querySelectorAll('#waterfall .wf-line');
-const nameIn = document.getElementById('nameInput');
-const nameRender = document.getElementById('nameRender');
-const fontChips = document.querySelectorAll('.font-chip');
 function syncTester(){ const v = (tIn.value || ' '); wfLines.forEach(l=> l.textContent = v); }
-function syncHeroDemo(){ if(nameRender && nameIn) nameRender.textContent = nameIn.value || ' '; }
-function setHeroFont(font){
-  if(!nameRender) return;
-  nameRender.classList.remove('font-dotom','font-ttobak','font-santteut');
-  nameRender.classList.add('font-' + font);
-  fontChips.forEach(btn=> btn.setAttribute('aria-pressed', btn.dataset.font === font ? 'true' : 'false'));
-}
 
 /* 한글 제목 의미 단위 줄바꿈: 아래 구(句)의 내부 공백을 nbsp로 바꿔 한 덩어리로 묶음.
    → word-break:keep-all 이 "의미 경계(일반 공백)"에서만 줄을 바꾼다. <br>과 달리 반응형. */
@@ -909,15 +881,11 @@ function applyLang(){
   if(lang==='ko') applyGlue();
   document.querySelectorAll('[data-i18n-html]').forEach(el=>{const k=el.dataset.i18nHtml; if(d[k]!=null) el.innerHTML=d[k];});
   if(tIn && !tIn.dataset.touched){ tIn.value = d.tester_default; syncTester(); }
-  if(nameIn && !nameIn.dataset.touched){ nameIn.value = d.name_default; syncHeroDemo(); }
 }
 
 /* 초기 언어 적용 + FOUC 해제를 가장 먼저 — 이후 코드 오류와 무관하게 본문 노출 보장 */
 langBtn.addEventListener('click', ()=>{ lang = lang==='ko'?'en':'ko'; try{localStorage.setItem('tt-lang',lang);}catch(e){} applyLang(); });
 tIn.addEventListener('input', ()=>{ tIn.dataset.touched='1'; syncTester(); });
-nameIn.addEventListener('input', ()=>{ nameIn.dataset.touched='1'; syncHeroDemo(); });
-fontChips.forEach(btn=> btn.addEventListener('click', ()=> setHeroFont(btn.dataset.font || 'dotom')));
-setHeroFont('dotom');
 applyLang();
 document.documentElement.classList.add('i18n-ready');
 
