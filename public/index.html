@@ -246,14 +246,12 @@ html.js .reveal.visible{opacity:1;transform:none}
 }
 .howto-demo iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .stories{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:1.8rem}
-.story{
-  background:var(--warm-white);border:1px solid var(--soft-gray);border-radius:1.3rem;
-  overflow:hidden;box-shadow:var(--shadow-card);display:flex;flex-direction:column;transition:.3s;
-}
-.story:hover{transform:translateY(-5px);box-shadow:var(--shadow-pop)}
+.story{display:flex;flex-direction:column}
+.story:hover .frame{transform:translateY(-5px);box-shadow:var(--shadow-pop)}
 .story .frame{
   position:relative;aspect-ratio:9/16;background:linear-gradient(160deg,var(--cream),var(--lavender-tint));
   display:grid;place-items:center;overflow:hidden;
+  border-radius:1.2rem;border:1px solid var(--soft-gray);box-shadow:var(--shadow-card);transition:.3s;
 }
 .story .frame img,.story .frame .frame-vid{width:100%;height:100%;object-fit:cover}
 .story .frame .step-no{
@@ -263,7 +261,7 @@ html.js .reveal.visible{opacity:1;transform:none}
 }
 .story .frame .soon{font-family:var(--pen);font-size:1.4rem;color:var(--lavender-ink);text-align:center;padding:1rem}
 .story .frame .soon .ic{display:block;font-size:1.8rem;margin-bottom:.2rem}
-.story .body{padding:.9rem 1rem 1.1rem}
+.story .body{padding:.85rem .25rem 0;text-align:center}
 .story .body h3{font-size:1rem;font-weight:400;margin-bottom:.3rem}
 .story .body p{font-size:.84rem;color:var(--cocoa-muted);line-height:1.55}
 
@@ -290,7 +288,7 @@ html.js .reveal.visible{opacity:1;transform:none}
   background:var(--ivory);border:1.5px solid var(--soft-gray);border-radius:1rem;padding:.9rem 1.2rem;outline:none;transition:.2s;
 }
 .tester input:focus{border-color:var(--rose);box-shadow:0 0 0 4px rgba(246,197,206,.25)}
-.tester .note{font-size:.82rem;color:var(--cocoa-muted);margin-top:.9rem}
+.tester .note{font-size:.82rem;color:var(--cocoa-muted);margin:0 0 1rem;line-height:1.6}
 
 /* ───────── Preview 갤러리 ───────── */
 .gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(1.2rem,3vw,2rem);margin-top:2.4rem;max-width:560px;margin-inline:auto}
@@ -397,7 +395,7 @@ html.js .reveal.visible{opacity:1;transform:none}
 .scene{display:grid;grid-template-columns:1fr 1fr;gap:clamp(1.4rem,4vw,2.8rem);align-items:center}
 .scene.reverse .scene-img{order:2}
 .scene-img{margin:0}
-.scene-img img{width:100%;border-radius:1.4rem;box-shadow:var(--shadow-pop);border:1px solid var(--soft-gray)}
+.scene-img img{width:100%;border-radius:1.4rem;box-shadow:var(--shadow-card);border:1px solid var(--soft-gray)}
 .scene-img figcaption{font-family:var(--pen-me);font-size:1.1rem;color:var(--cocoa-muted);text-align:center;margin-top:.6rem}
 .scene-text p{font-size:1.05rem;line-height:1.9;color:var(--cocoa)}
 .scene-text p + p{margin-top:1rem}
@@ -526,43 +524,26 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
   <div class="hero-visual">
     <div class="tester">
       <span class="tester-tab" data-i18n="tt_label">라이브 미리보기</span>
+      <p class="note" data-i18n="tt_note">✍️ 이 글씨는 TappyType으로 만든 진짜 손글씨 폰트예요. 앱에서는 '내' 글씨가 이렇게 돼요.</p>
       <input id="testerInput" type="text" maxlength="40" value="강물 바다 봄날 하늘" aria-label="미리보기 문장 입력">
       <div class="waterfall" id="waterfall" aria-live="polite">
         <div class="wf-line s1">강물 바다 봄날 하늘</div>
         <div class="wf-line s2">강물 바다 봄날 하늘</div>
         <div class="wf-line s3">강물 바다 봄날 하늘</div>
       </div>
-      <p class="note" data-i18n="tt_note">✍️ 이 글씨는 TappyType으로 만든 진짜 손글씨 폰트예요. 앱에서는 '내' 글씨가 이렇게 돼요.</p>
     </div>
     <img class="hero-tappy" id="heroTappy" src="/assets/mascot-waving.png" alt="펜을 든 태피가 손을 흔들어요" width="488" height="500">
   </div>
 </header>
 
 <main>
-<section id="moment" class="reveal">
-  <div class="moment">
-    <div class="bignum">11,172</div>
-    <div class="m-copy">
-      <span class="sec-label" data-i18n="moment_label">딸깍 한 번의 일</span>
-      <h2 data-i18n="moment_title">한글은 11,172자. 39자만 쓰면, 나머지는 딸깍.</h2>
-      <p class="sec-sub" data-i18n="moment_sub">전부 손으로 쓰는 건 불가능에 가까워요. 태피타입의 AI는 내가 쓴 몇 글자에서 글씨체를 배워, 안 쓴 글자를 같은 느낌으로 그려줘요.</p>
-      <div class="counter" aria-hidden="true">
-        <span class="from" id="cFrom">39</span>
-        <span class="arrow">→</span>
-        <span class="to" id="cTo">11,172</span>
-        <span class="unit" data-i18n="counter_unit">자</span>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section id="howto" class="reveal">
   <span class="sec-label" data-i18n="how_label">이렇게 만들어요</span>
   <h2 data-i18n="how_title">설치하고, 쓰고, 딸깍하고, 내보내면 끝</h2>
   <p class="sec-sub" data-i18n="how_sub">손글씨를 어떻게 인식시키고 폰트로 굽는지, 55초면 충분해요. 단계별로 짧게 담았어요.</p>
 
   <div class="howto-demo">
-    <iframe src="https://www.youtube-nocookie.com/embed/fZ17qKEMe54" title="TappyType 데모 영상 — 손글씨가 폰트가 되는 과정"
+    <iframe id="ttDemo" src="https://www.youtube-nocookie.com/embed/fZ17qKEMe54?autoplay=1&amp;mute=1&amp;playsinline=1&amp;rel=0&amp;loop=1&amp;playlist=fZ17qKEMe54&amp;enablejsapi=1&amp;vq=hd1080" title="TappyType 데모 영상 — 손글씨가 폰트가 되는 과정"
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen loading="lazy"></iframe>
   </div>
@@ -599,7 +580,22 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
   </div>
 </section>
 
-
+<section id="moment" class="reveal">
+  <div class="moment">
+    <div class="bignum">11,172</div>
+    <div class="m-copy">
+      <span class="sec-label" data-i18n="moment_label">딸깍 한 번의 일</span>
+      <h2 data-i18n="moment_title">한글은 11,172자. 39자만 쓰면, 나머지는 딸깍.</h2>
+      <p class="sec-sub" data-i18n="moment_sub">전부 손으로 쓰는 건 불가능에 가까워요. 태피타입의 AI는 내가 쓴 몇 글자에서 글씨체를 배워, 안 쓴 글자를 같은 느낌으로 그려줘요.</p>
+      <div class="counter" aria-hidden="true">
+        <span class="from" id="cFrom">39</span>
+        <span class="arrow">→</span>
+        <span class="to" id="cTo">11,172</span>
+        <span class="unit" data-i18n="counter_unit">자</span>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section id="fonts" class="reveal">
   <span class="sec-label" data-i18n="fg_label">진짜 폰트</span>
@@ -725,7 +721,7 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
         <svg viewBox="0 0 384 512" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
         <span class="ab-text"><small data-i18n="ab_small">App Store에서</small><b data-i18n="ab_big">다운로드</b></span>
       </a>
-      <p class="dl-universal">📱 <span data-i18n="dl_universal">iPhone · iPad 유니버설 앱</span></p>
+      <p class="dl-universal"><span data-i18n="dl_universal">iPhone · iPad 유니버설 앱</span></p>
       <div class="dl-qr"><span class="qr"><img src="/assets/appstore-qr.svg" alt="App Store 다운로드 QR 코드" width="64" height="64" loading="lazy" onerror="this.closest('.qr').textContent='▦'"></span><span data-i18n="dl_qr">데스크톱이라면, 휴대폰으로 코드를 스캔하세요</span></div>
     </div>
   </div>
@@ -933,7 +929,16 @@ function revealInView(){
 addEventListener('load', revealInView);
 addEventListener('resize', revealInView);
 
+/* ───────── YouTube 데모: 2배속 · 음소거 · 자동재생 ───────── */
+function onYouTubeIframeAPIReady(){
+  try{
+    new YT.Player('ttDemo', {
+      events:{ onReady:function(e){ try{ e.target.setPlaybackRate(2); e.target.mute(); e.target.playVideo(); }catch(_){} } }
+    });
+  }catch(_){}
+}
 </script>
+<script src="https://www.youtube.com/iframe_api"></script>
 <script type="module" src="https://w.behold.so/widget.js"></script>
 </body>
 </html>
