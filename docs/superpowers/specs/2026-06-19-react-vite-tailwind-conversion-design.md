@@ -112,12 +112,25 @@ web/
 - `Button` / `AppStoreBadge` — CTA·App Store 배지(variant dict)
 - `Card` — 카드 표면(폰트 갤러리·단계 카드 등)
 - `TextField` — 테스터/히어로 입력
+- `MediaPlaceholder` / `EmptyState` — "곧 공개"·"예시 사진 준비 중" 등 미완 콘텐츠를 일관된 컴포넌트로. 콘텐츠가 채워질 때 prop 교체만으로 전환되게 설계 (현행은 howto 영상·preview 사진·founder 스토리가 제각각의 빈 카드 → 통일). [검토 발견 #3]
 - 각 프리미티브는 토큰만 참조하고 색·간격 하드코딩 금지.
 
-### 5.4 문서화 (선택, 가벼움)
+### 5.4 gradient / 모션 토큰 정책 [검토 발견 #1]
+
+frontend-design 원칙 "보임새의 과감함은 한 곳에만(spend boldness in one place)" 적용:
+
+- **gradient는 시그니처 한정** — hero 모핑 헤드라인, 키캡 "딸깍" 버튼 등 제품 정체성 요소에만. 그 외 카드·텍스트의 장식성 gradient는 절제(단색 토큰 우선).
+- `#moment`의 `11,172` 큰 숫자는 한글 음절 수라는 **의미가 있어 유지**하되, gradient 텍스트 처리는 단색/절제 옵션을 토큰으로 노출.
+- 모션 토큰(duration/easing)을 정의하고 `prefers-reduced-motion`을 모든 애니메이션 훅에서 존중(현행 유지).
+
+### 5.5 문서화 (선택, 가벼움)
 
 - `src/styles/tokens.css` 상단 주석 + spec으로 토큰 표를 1차 기록.
 - 과한 도구(Storybook 등)는 범위 밖(YAGNI). 필요 시 후속.
+
+### 5.6 검토 출처
+
+이 섹션의 5.3 `MediaPlaceholder`/`EmptyState`와 5.4 gradient 정책은 2026-06-19 frontend-design 셀프 검토(실제 화면 캡처 기반)에서 도출. 검토에서 식별된 정보 구조 변경(`#tester`/hero 순서 — 발견 #2)과 비주얼 변경은 **이번 변환 범위 밖**(현행 유지)으로, 별도 작업으로 분리.
 
 ## 6. 다국어 (react-i18next, 경로 기반)
 
