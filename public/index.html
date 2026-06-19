@@ -269,10 +269,15 @@ html.js .reveal.visible{opacity:1;transform:none}
 
 /* ───────── 라이브 미리보기 (워터폴) ───────── */
 .tester{
-  background:var(--warm-white);border:1px solid var(--soft-gray);
-  border-radius:1.8rem;padding:clamp(1.4rem,3.5vw,2.4rem);box-shadow:var(--shadow-card);
+  position:relative;background:var(--warm-white);border:1px solid var(--soft-gray);
+  border-radius:.5rem;padding:1.7rem 1.4rem 1.3rem;box-shadow:0 4px 16px rgba(90,65,54,.07);
 }
-.waterfall{display:grid;gap:.2rem;margin-bottom:1.3rem}
+.tester-tab{
+  position:absolute;top:-.85rem;left:1.3rem;font-family:var(--pen);font-size:1.2rem;line-height:1;
+  color:var(--rose-ink);background:var(--blush);padding:.32rem .9rem;border-radius:.5rem;
+  box-shadow:0 2px 5px rgba(90,65,54,.12);transform:rotate(-2.5deg);white-space:nowrap;
+}
+.waterfall{display:grid;gap:.2rem}
 .wf-line{
   font-family:'JiinHand',var(--pen);color:var(--cocoa);line-height:1.5;
   border-bottom:1.5px solid var(--rose);padding:.2rem .3rem .3rem;word-break:keep-all;overflow-wrap:anywhere;
@@ -281,7 +286,7 @@ html.js .reveal.visible{opacity:1;transform:none}
 .wf-line.s2{font-size:clamp(2.2rem,5.5vw,3.1rem);opacity:.9}
 .wf-line.s3{font-size:clamp(2.9rem,7vw,4.2rem)}
 .tester input{
-  width:100%;font-family:var(--body);font-size:1rem;color:var(--cocoa);
+  width:100%;font-family:var(--body);font-size:1rem;color:var(--cocoa);margin-bottom:1.2rem;
   background:var(--ivory);border:1.5px solid var(--soft-gray);border-radius:1rem;padding:.9rem 1.2rem;outline:none;transition:.2s;
 }
 .tester input:focus{border-color:var(--rose);box-shadow:0 0 0 4px rgba(246,197,206,.25)}
@@ -520,13 +525,13 @@ footer .pen-sign{font-family:var(--pen-me);font-size:1.4rem;color:var(--rose-ink
 
   <div class="hero-visual">
     <div class="tester">
-      <span class="sec-label" data-i18n="tt_label">라이브 미리보기</span>
+      <span class="tester-tab" data-i18n="tt_label">라이브 미리보기</span>
+      <input id="testerInput" type="text" maxlength="40" value="강물 바다 봄날 하늘" aria-label="미리보기 문장 입력">
       <div class="waterfall" id="waterfall" aria-live="polite">
         <div class="wf-line s1">강물 바다 봄날 하늘</div>
         <div class="wf-line s2">강물 바다 봄날 하늘</div>
         <div class="wf-line s3">강물 바다 봄날 하늘</div>
       </div>
-      <input id="testerInput" type="text" maxlength="40" value="강물 바다 봄날 하늘" aria-label="미리보기 문장 입력">
       <p class="note" data-i18n="tt_note">✍️ 이 글씨는 TappyType으로 만든 진짜 손글씨 폰트예요. 앱에서는 '내' 글씨가 이렇게 돼요.</p>
     </div>
     <img class="hero-tappy" id="heroTappy" src="/assets/mascot-waving.png" alt="펜을 든 태피가 손을 흔들어요" width="488" height="500">
@@ -817,7 +822,7 @@ const I18N = {
     step4_t:'Export as .ttf', step4_p:'A real font file — use it anywhere fonts work: GoodNotes, Procreate, Keynote, Word.', step4_soon:'.ttf export<br>coming soon',
     tt_label:'Live preview', tt_title:'Sentences become your handwriting, instantly',
     tt_note:'✍️ This is a real handwriting font made with TappyType — in the app, your writing looks like this.',
-    tester_default:'The quick brown fox 봄날',
+    tester_default:'Hello 봄날',
     fg_label:'Real fonts', fg_title:'Every one made with TappyType',
     fg_sub:'Same sentence, a different hand each time — all real .ttf handwriting fonts.',
     fg_d1:'Dotom', fg_d3:'Ttobak', fg_d5:'Santteut',
