@@ -15,13 +15,13 @@ interface Step {
 const STEPS: Step[] = [
   {
     no: 1,
-    img: { src: '/assets/shot-onboarding.png', alt: 'App Store에서 태피타입을 설치하고 처음 만나는 화면', width: 750, height: 1000 },
+    img: { src: '/assets/shot-onboarding.png', alt: 'App Store에서 태피타입을 설치하고 처음 만나는 화면', width: 760, height: 1651 },
     titleKey: 'step1_t',
     descKey: 'step1_p',
   },
   {
     no: 2,
-    img: { src: '/assets/shot-main.png', alt: '가이드 따라 글자 셀에 손글씨를 쓰는 편집 화면', width: 750, height: 1000 },
+    img: { src: '/assets/shot-main.png', alt: '가이드 따라 4칸 글자 셀에 손글씨를 쓰는 편집 화면', width: 760, height: 1651 },
     titleKey: 'step2_t',
     descKey: 'step2_p',
   },

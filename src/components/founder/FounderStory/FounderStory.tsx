@@ -23,8 +23,8 @@ export default function FounderStory() {
               src="/assets/shot-onboarding.png"
               alt="태피타입 앱 온보딩 화면"
               loading="lazy"
-              width={750}
-              height={1000}
+              width={760}
+              height={1651}
             />
           </div>
           <div className="scene-text">
@@ -62,8 +62,8 @@ export default function FounderStory() {
               src="/assets/shot-main.png"
               alt="태피타입 편집 화면"
               loading="lazy"
-              width={750}
-              height={1000}
+              width={760}
+              height={1651}
             />
           </div>
           <div className="scene-text">
