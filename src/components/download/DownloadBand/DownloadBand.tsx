@@ -17,7 +17,7 @@ export default function DownloadBand() {
     <Section id="download" onReveal={onReveal}>
       <div className={`download-band${filled ? ' filled' : ''}`}>
         <div className="dl-cell" aria-hidden="true">
-          {filled ? '가' : ''}
+          <span className="dl-cell-char">{filled ? '가' : ''}</span>
         </div>
         <span className="sec-label">{t('dl_label')}</span>
         <h2>{t('dl_title')}</h2>

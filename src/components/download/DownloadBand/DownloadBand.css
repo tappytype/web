@@ -7,16 +7,16 @@
   overflow: hidden;
 }
 .dl-cell {
-  width: 96px;
-  height: 96px;
+  width: 150px;
+  height: 150px;
   margin: 0 auto 1.4rem;
-  border-radius: 1.1rem;
+  border-radius: 1.4rem;
   background: var(--warm-white);
   border: 2.5px dashed var(--rose);
   display: grid;
   place-items: center;
-  font-family: var(--pen-me);
-  font-size: 3.2rem;
+  font-family: var(--font-title);
+  font-size: 6.4rem;
   color: transparent;
   box-shadow: var(--shadow-card);
   transition: background 0.4s, color 0.4s, border-color 0.4s;
@@ -27,6 +27,11 @@
   background: var(--lavender-tint);
   color: var(--lavender-ink);
 }
+/* 라인박스를 글자 크기에 맞춰 줄이면 place-items:center로 시각적 정중앙에 온다 */
+.dl-cell-char {
+  display: block;
+  line-height: 1;
+}
 .download-band h2 {
   margin-bottom: 0.5rem;
 }
@@ -34,6 +39,7 @@
   color: var(--cocoa-muted);
   max-width: 34rem;
   margin: 0 auto 1.6rem;
+  white-space: pre-line;
   text-wrap: pretty;
 }
 .dl-actions {
