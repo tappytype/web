@@ -47,6 +47,7 @@
 }
 .howto-demo {
   margin-top: 2.2rem;
+  scroll-margin-top: 88px;
   position: relative;
   aspect-ratio: 16 / 9;
   border-radius: 1.6rem;

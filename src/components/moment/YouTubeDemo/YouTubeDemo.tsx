@@ -56,7 +56,7 @@ export default function YouTubeDemo() {
     `?autoplay=1&mute=1&playsinline=1&rel=0&loop=1&playlist=${demoVideoId}&enablejsapi=1&vq=hd1080`
 
   return (
-    <div className="howto-demo">
+    <div id="demo" className="howto-demo">
       <iframe
         id={PLAYER_ID}
         src={src}

@@ -18,7 +18,7 @@ export default function Hero() {
 
         <div className="hero-cta">
           <AppStoreBadge />
-          <a className="demo-link" href="#moment">
+          <a className="demo-link" href="#demo">
             ▶ {t('cta_demo')}
           </a>
         </div>
