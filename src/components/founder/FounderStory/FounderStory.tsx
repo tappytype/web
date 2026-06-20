@@ -30,7 +30,7 @@ export default function FounderStory() {
           <div className="scene-text">
             <p>
               Today, thanks to AI, we can do almost anything in the digital world. For my dream of
-              making my own font, I decided to build an iPad app that easily creates letter image
+              making my own font, I decided to build an iPad app that easily creates character image
               files.
             </p>
           </div>
@@ -40,9 +40,9 @@ export default function FounderStory() {
           <div className="scene-text">
             <p>
               However, there&rsquo;s still a challenge because of the unique properties of the Korean
-              character <span className="han">한글</span>. I need to write out each letter for the
+              character <span className="han">한글</span>. I need to write out each character for the
               11,172 possible character combinations (at least 2350). If not, you will see clumsy
-              letters. Neither the Apple Pencil nor NanoBanana can solve this problem.
+              characters. Neither the Apple Pencil nor NanoBanana can solve this problem.
             </p>
           </div>
           <figure className="scene-img">
