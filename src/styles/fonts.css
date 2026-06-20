@@ -20,6 +20,11 @@
   font-display: swap;
 }
 @font-face {
+  font-family: 'MyAlphabet';
+  src: url('/assets/fonts/myalphabet.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
   font-family: 'Jiin2606011';
   src: url('/assets/fonts/Jiin2606011.woff2') format('woff2');
   font-display: swap;

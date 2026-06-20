@@ -28,6 +28,7 @@
   --font-dotom: 'JiinDotom', 'Nanum Pen Script', cursive;
   --font-hero: 'JiinHero', 'Nanum Pen Script', cursive;
   --font-hand: 'JiinHand', 'Nanum Pen Script', cursive;
+  --font-title: 'MyAlphabet', 'Nanum Pen Script', cursive;
 
   /* 그림자 */
   --shadow-card: 0 2px 24px rgba(90, 65, 54, 0.09);
@@ -55,4 +56,5 @@
   --body: var(--font-body);
   --pen: var(--font-pen);
   --pen-me: var(--font-pen-me);
+  --title: var(--font-title);
 }
