@@ -1,0 +1,64 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(1.2rem, 3vw, 2rem);
+  margin-top: 2.4rem;
+  max-width: 560px;
+  margin-inline: auto;
+}
+.frame-card {
+  position: relative;
+}
+.frame-card .pic {
+  position: relative;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid rgba(230, 226, 221, 0.8);
+  box-shadow: var(--shadow-pop);
+  background: linear-gradient(160deg, var(--cream), var(--blush));
+  aspect-ratio: 3 / 4;
+  display: grid;
+  place-items: center;
+}
+.frame-card .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.frame-card .tape {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 96px;
+  height: 26px;
+  border-radius: 3px;
+  z-index: 2;
+}
+.frame-card:nth-child(odd) {
+  transform: rotate(-1.2deg);
+}
+.frame-card:nth-child(even) {
+  transform: rotate(1.4deg);
+}
+.frame-card:nth-child(odd) .tape {
+  background: var(--rose);
+  opacity: 0.55;
+}
+.frame-card:nth-child(even) .tape {
+  background: var(--lavender);
+  opacity: 0.45;
+  transform: translateX(-50%) rotate(2.5deg);
+}
+.frame-card figcaption {
+  font-family: var(--pen-me);
+  font-size: 1.25rem;
+  color: var(--cocoa-muted);
+  text-align: center;
+  margin-top: 0.9rem;
+}
+@media (max-width: 840px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}

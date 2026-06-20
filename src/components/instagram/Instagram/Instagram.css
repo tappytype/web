@@ -1,0 +1,11 @@
+#insta {
+  text-align: center;
+}
+.insta-embed {
+  margin-top: 2rem;
+}
+.story-link {
+  display: inline-block;
+  margin-top: 1.4rem;
+  font-size: 0.92rem;
+}

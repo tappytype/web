@@ -1,0 +1,47 @@
+.privacy-band {
+  background: linear-gradient(165deg, var(--cream), var(--blush) 130%);
+  border-radius: 2.2rem;
+  padding: clamp(2rem, 5vw, 3.5rem);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+.privacy-band img {
+  width: clamp(110px, 16vw, 170px);
+}
+.privacy-band ul {
+  list-style: none;
+  margin-top: 1.2rem;
+  display: grid;
+  gap: 0.7rem;
+}
+.privacy-band li {
+  padding-left: 1.7rem;
+  position: relative;
+  color: var(--cocoa-muted);
+  font-size: 0.97rem;
+}
+.privacy-band li::before {
+  content: '✦';
+  position: absolute;
+  left: 0.2rem;
+  color: var(--rose-ink);
+  font-size: 0.8rem;
+}
+.privacy-band a {
+  font-size: 0.9rem;
+}
+@media (max-width: 840px) {
+  .privacy-band {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+  }
+  .privacy-band img {
+    width: clamp(96px, 28vw, 140px);
+  }
+  .privacy-band li {
+    text-align: left;
+  }
+}

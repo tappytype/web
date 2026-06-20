@@ -1,0 +1,120 @@
+@import 'tailwindcss';
+@import './tokens.css';
+@import './fonts.css';
+@import './keyframes.css';
+
+/* ───────── 전역 베이스 ───────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--body);
+  color: var(--cocoa);
+  background: var(--ivory);
+  line-height: 1.7;
+  overflow-x: hidden;
+  word-break: keep-all;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 47px,
+    rgba(90, 65, 54, 0.04) 47px,
+    rgba(90, 65, 54, 0.04) 48px
+  );
+}
+::selection {
+  background: var(--blush);
+  color: var(--rose-ink);
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+a {
+  color: var(--rose-ink);
+}
+
+/* 의미 단위 줄바꿈 */
+h1,
+h2,
+h3,
+.eyebrow,
+.sec-label {
+  text-wrap: balance;
+}
+p,
+li,
+.sec-sub,
+.dl-sub {
+  text-wrap: pretty;
+}
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid var(--lavender-ink);
+  outline-offset: 3px;
+}
+
+/* ───────── 공통 섹션 레이아웃 ───────── */
+section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(3rem, 8vh, 5.5rem) clamp(1.2rem, 4vw, 2.5rem);
+  scroll-margin-top: 72px;
+}
+.sec-label {
+  font-family: var(--pen-me);
+  font-size: 1.5rem;
+  color: var(--rose-ink);
+  display: block;
+  margin-bottom: 0.4rem;
+}
+h2 {
+  font-size: clamp(1.7rem, 3.4vw, 2.4rem);
+  font-weight: 400;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+.sec-sub {
+  color: var(--cocoa-muted);
+  margin-top: 0.7rem;
+  max-width: 38rem;
+}
+
+/* ───────── 스크롤 리빌 ─────────
+   SSG/무JS 안전: 기본은 보임. js-reveal(루트에 마운트 전 inline으로 부여) 있을 때만 숨겼다 노출. */
+.reveal {
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+html.js-reveal .reveal {
+  opacity: 0;
+  transform: translateY(26px);
+}
+html.js-reveal .reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  html.js-reveal .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}

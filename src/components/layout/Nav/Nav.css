@@ -1,0 +1,73 @@
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.7rem clamp(1rem, 4vw, 2.5rem);
+  background: rgba(255, 247, 243, 0.86);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(230, 226, 221, 0.6);
+}
+nav .logo {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+}
+nav .wordmark {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.06em;
+  text-decoration: none;
+  line-height: 1;
+}
+nav .wordmark .tappy {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--rose-ink);
+}
+nav .wordmark .type {
+  font-family: var(--serif);
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--cocoa);
+}
+nav .spacer {
+  flex: 1;
+}
+nav a.plain {
+  color: var(--cocoa-muted);
+  text-decoration: none;
+  font-size: 0.88rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.6rem;
+}
+nav a.plain:hover {
+  background: var(--cream);
+}
+.lang-toggle {
+  font-family: var(--body);
+  font-size: 0.82rem;
+  color: var(--cocoa);
+  cursor: pointer;
+  background: var(--warm-white);
+  border: 1px solid var(--soft-gray);
+  border-radius: 999px;
+  padding: 0.32rem 0.85rem;
+  transition: 0.2s;
+}
+.lang-toggle:hover {
+  border-color: var(--rose);
+  background: var(--blush);
+}
+@media (max-width: 600px) {
+  nav {
+    gap: 0.4rem;
+    padding: 0.6rem 1rem;
+  }
+  nav .nav-privacy-link {
+    display: none;
+  }
+}

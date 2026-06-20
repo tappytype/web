@@ -1,0 +1,88 @@
+{
+  "seo_title": "TappyType — Your handwriting becomes a real font | AI Korean handwriting font maker",
+  "seo_desc": "Make your own Korean handwriting font on iPhone & iPad. Write a few characters and AI fills in the rest in your style, then export a real .ttf. On the App Store now.",
+  "og_title": "TappyType — Your handwriting, a real font",
+  "og_desc": "Write a few characters and AI fills in the rest of Hangul in your style. Export a real .ttf and use it anywhere. iPhone & iPad, on the App Store.",
+
+  "nav_privacy": "Privacy Policy",
+  "ab_small": "Download on the",
+  "ab_big": "App Store",
+
+  "badge": "Write 39 · the other 11,133 are one tap",
+  "hero_h1a": "Your handwriting,",
+  "hero_h1b": "a real font",
+  "hero_sub": "Write a few characters with your finger or Apple Pencil, and AI fills in all 11,172 Hangul syllables in your style. Export a real .ttf and use it in GoodNotes, Procreate, Keynote — anywhere.",
+  "cta_demo": "Watch 55s demo",
+
+  "tt_label": "Live preview",
+  "tt_note": "✍️ This is a real handwriting font made with TappyType — in the app, your writing looks like this.",
+  "tester_default": "Hello sky 봄날",
+  "tester_aria": "Preview sentence input",
+
+  "how_label": "How it works",
+  "how_title": "Install, write, tap, export — done",
+  "how_sub": "How your handwriting gets recognized and baked into a font — 55 seconds is enough. Here it is, step by step.",
+  "step1_t": "Install from the App Store",
+  "step1_p": "Get TappyType on your iPhone or iPad, and Tappy is with you from the start.",
+  "step2_t": "Write along the guides",
+  "step2_p": "Follow the baseline and tracing hints for a few characters. It previews live as you write.",
+  "step4_t": "Export as .ttf",
+  "step4_p": "A real font file — use it anywhere fonts work: GoodNotes, Procreate, Keynote, Word.",
+  "step3_t": "Use it anywhere",
+  "step3_p": "Use your finished font in GoodNotes, calendars, notes — your handwriting, everywhere.",
+
+  "moment_label": "what one tap does",
+  "moment_title": "Korean has 11,172 syllables. Write 39 — the rest is one tap.",
+  "moment_sub": "Writing them all by hand is nearly impossible. TappyType's AI learns your style from the few you write and draws the rest to match.",
+  "counter_unit": "glyphs",
+
+  "fg_label": "Real fonts",
+  "fg_title": "Every one made with TappyType",
+  "fg_sub": "Same sentence, a different hand each time — all real .ttf handwriting fonts.",
+  "fg_sample": "오늘 쓴 손글씨가 그대로 폰트가 됐어요",
+  "fg_d1": "Dotom",
+  "fg_d3": "Ttobak",
+  "fg_d5": "Santteut",
+
+  "pv2_label": "In real use",
+  "pv2_title": "Your finished font, all over daily life",
+  "pv2_sub": "GoodNotes diaries, Procreate lettering, Keynote, handwritten cards — real examples styled with your own handwriting font.",
+  "pv2_cap1": "iPad calendar",
+  "pv2_cap2": "In the app, my hand",
+
+  "pv_label": "Your data stays yours",
+  "pv_title": "No accounts, no ads, no tracking",
+  "pv_li1": "Writing, preview, and font building all happen on your device.",
+  "pv_li2": "Only when you use AI Tap, handwriting images are sent to our server — processed and immediately discarded, never stored.",
+  "pv_li3": "Your fonts (.ttf) are entirely yours.",
+  "pv_link": "Read the full privacy policy →",
+
+  "st_label": "The maker's story",
+  "st_title": "How my handwriting became a real font",
+  "st_link": "📷 More on Instagram @tappytype",
+
+  "mk_label": "The makers",
+  "mk_title": "Built by two friends who met at nine",
+  "mk_jiin": "From design to the app to this very site — everything that reaches your hands.",
+  "mk_bobae": "Computer vision is what got me into ML; 3+ years of production systems later — tabular classifiers, generative AI, LLM pipelines — I still care most about what a model does for the person using it. Here, that's something genuinely fun: teaching a model to read your 손글씨 and turn it into a font that's actually yours.",
+
+  "ig_label": "Instagram",
+  "ig_title": "TappyType lately",
+  "ig_sub": "We document the build and updates on Instagram.",
+  "ig_follow": "→ Follow @tappytype",
+
+  "dl_label": "your first cell",
+  "dl_title": "Write a few characters today",
+  "dl_sub": "Fill the first cell, and Tappy taps in the rest. This is the moment your handwriting becomes a real font.",
+  "dl_universal": "iPhone · iPad universal app",
+  "dl_qr": "On desktop? Scan the code with your phone.",
+
+  "ft_tag": "AI Korean handwriting font maker for iPhone & iPad",
+  "ft_download": "Get it on the App Store",
+  "ft_datadel": "Data deletion",
+  "ft_contact": "Contact",
+  "ft_sign": "Write a few characters today ✍️",
+
+  "lang_switch_label": "Switch language",
+  "lang_switch_to": "한"
+}

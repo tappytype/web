@@ -1,0 +1,58 @@
+/* ───────── 디자인 토큰 (단일 진실의 원천) ─────────
+   iOS TypeTapTheme.swift 팔레트와 1:1 동기화.
+   Tailwind v4 @theme → 유틸리티(bg-ivory 등)와 var(--color-ivory) 양쪽에서 사용.
+   색·폰트·간격을 바꾸려면 여기 한 곳만 고치면 전 페이지에 반영된다. */
+@theme {
+  /* 색 */
+  --color-ivory: #fff7f3;
+  --color-cream: #f6efe6;
+  --color-blush: #ffe4ea;
+  --color-rose: #f6c5ce;
+  --color-rose-deep: #f2a8b8;
+  --color-lavender: #c5b4dc;
+  --color-lavender-tint: #e8ddf4;
+  --color-coral: #ffb3aa;
+  --color-cocoa: #5a4136;
+  --color-cocoa-soft: #8d6e63;
+  --color-cocoa-muted: #7a5e52;
+  --color-soft-gray: #e6e2dd;
+  --color-warm-white: #fffdfb;
+  --color-rose-ink: #c75a72;
+  --color-lavender-ink: #6e579f;
+
+  /* 타이포 */
+  --font-serif: 'Playfair Display', serif;
+  --font-body: 'Gowun Dodum', sans-serif;
+  --font-pen: 'Nanum Pen Script', cursive;
+  --font-pen-me: 'TappyTypeSample', 'Nanum Pen Script', cursive;
+  --font-dotom: 'JiinDotom', 'Nanum Pen Script', cursive;
+  --font-hero: 'JiinHero', 'Nanum Pen Script', cursive;
+  --font-hand: 'JiinHand', 'Nanum Pen Script', cursive;
+
+  /* 그림자 */
+  --shadow-card: 0 2px 24px rgba(90, 65, 54, 0.09);
+  --shadow-pop: 0 12px 40px rgba(90, 65, 54, 0.14);
+}
+
+/* 컴포넌트 co-located CSS가 쓰는 짧은 별칭 — @theme 토큰을 가리킨다(원천은 위 한 곳). */
+:root {
+  --ivory: var(--color-ivory);
+  --cream: var(--color-cream);
+  --blush: var(--color-blush);
+  --rose: var(--color-rose);
+  --rose-deep: var(--color-rose-deep);
+  --lavender: var(--color-lavender);
+  --lavender-tint: var(--color-lavender-tint);
+  --coral: var(--color-coral);
+  --cocoa: var(--color-cocoa);
+  --cocoa-soft: var(--color-cocoa-soft);
+  --cocoa-muted: var(--color-cocoa-muted);
+  --soft-gray: var(--color-soft-gray);
+  --warm-white: var(--color-warm-white);
+  --rose-ink: var(--color-rose-ink);
+  --lavender-ink: var(--color-lavender-ink);
+  --serif: var(--font-serif);
+  --body: var(--font-body);
+  --pen: var(--font-pen);
+  --pen-me: var(--font-pen-me);
+}

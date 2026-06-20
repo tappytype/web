@@ -1,0 +1,71 @@
+.download-band {
+  background: linear-gradient(160deg, var(--lavender-tint), var(--ivory) 120%);
+  border-radius: 2.2rem;
+  padding: clamp(2.2rem, 6vw, 4rem) clamp(1.5rem, 5vw, 3.5rem);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.dl-cell {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 1.4rem;
+  border-radius: 1.1rem;
+  background: var(--warm-white);
+  border: 2.5px dashed var(--rose);
+  display: grid;
+  place-items: center;
+  font-family: var(--pen-me);
+  font-size: 3.2rem;
+  color: transparent;
+  box-shadow: var(--shadow-card);
+  transition: background 0.4s, color 0.4s, border-color 0.4s;
+}
+.download-band.filled .dl-cell {
+  border-style: solid;
+  border-color: var(--lavender);
+  background: var(--lavender-tint);
+  color: var(--lavender-ink);
+}
+.download-band h2 {
+  margin-bottom: 0.5rem;
+}
+.download-band .dl-sub {
+  color: var(--cocoa-muted);
+  max-width: 34rem;
+  margin: 0 auto 1.6rem;
+  text-wrap: pretty;
+}
+.dl-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.dl-universal {
+  font-size: 0.85rem;
+  color: var(--cocoa-muted);
+}
+.dl-qr {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 0.82rem;
+  color: var(--cocoa-muted);
+  margin-top: 0.3rem;
+}
+.dl-qr .qr {
+  width: 74px;
+  height: 74px;
+  border-radius: 0.6rem;
+  background: var(--warm-white);
+  border: 1px solid var(--soft-gray);
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+}
+@media (max-width: 560px) {
+  .dl-qr {
+    display: none;
+  }
+}

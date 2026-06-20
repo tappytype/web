@@ -1,0 +1,42 @@
+footer {
+  border-top: 1px solid var(--soft-gray);
+  margin-top: 2rem;
+  padding: 2.5rem clamp(1.2rem, 4vw, 2.5rem) 3rem;
+  text-align: center;
+  color: var(--cocoa-muted);
+  font-size: 0.88rem;
+}
+footer .fbrand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.06em;
+  margin-bottom: 0.5rem;
+}
+footer .fbrand .tappy {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--rose-ink);
+}
+footer .fbrand .type {
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--cocoa);
+}
+footer .links {
+  display: flex;
+  justify-content: center;
+  gap: 1.4rem;
+  margin: 0.8rem 0 1rem;
+  flex-wrap: wrap;
+}
+footer a {
+  color: var(--cocoa-muted);
+}
+footer .pen-sign {
+  font-family: var(--pen-me);
+  font-size: 1.4rem;
+  color: var(--rose-ink);
+  margin-top: 1.2rem;
+}

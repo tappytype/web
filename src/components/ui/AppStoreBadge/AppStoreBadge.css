@@ -1,0 +1,63 @@
+/* 공식 톤 App Store 배지(블랙 필 + 애플 로고) */
+.appstore {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  text-decoration: none;
+  background: #1b1714;
+  color: #fff;
+  border-radius: 0.9rem;
+  padding: 0.62rem 1.05rem;
+  transition: 0.25s;
+  box-shadow: 0 6px 20px rgba(27, 23, 20, 0.22);
+}
+.appstore:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(27, 23, 20, 0.3);
+}
+.appstore svg {
+  width: 1.55rem;
+  height: 1.55rem;
+  fill: #fff;
+  flex: 0 0 auto;
+}
+.appstore .ab-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.12;
+  text-align: left;
+}
+.appstore .ab-text small {
+  font-size: 0.62rem;
+  opacity: 0.82;
+  letter-spacing: 0.01em;
+}
+.appstore .ab-text b {
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+.appstore.sm {
+  padding: 0.42rem 0.8rem;
+  border-radius: 0.7rem;
+}
+.appstore.sm svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+.appstore.sm .ab-text small {
+  font-size: 0.54rem;
+}
+.appstore.sm .ab-text b {
+  font-size: 0.84rem;
+}
+.appstore.lg {
+  padding: 0.85rem 1.5rem;
+  border-radius: 1.1rem;
+}
+.appstore.lg svg {
+  width: 2rem;
+  height: 2rem;
+}
+.appstore.lg .ab-text b {
+  font-size: 1.22rem;
+}

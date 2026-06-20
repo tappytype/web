@@ -1,0 +1,41 @@
+.fontgallery {
+  margin-top: 2.4rem;
+  display: flex;
+  flex-direction: column;
+}
+.fontline {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1.2rem;
+  padding: 1.15rem 0.3rem;
+  border-bottom: 1.5px solid var(--soft-gray);
+}
+.fontline:last-child {
+  border-bottom: none;
+}
+.fontline .sample {
+  font-size: clamp(1.5rem, 4.4vw, 2.4rem);
+  line-height: 1.45;
+  color: var(--cocoa);
+  word-break: keep-all;
+}
+.fontline .tag {
+  flex-shrink: 0;
+  font-family: var(--body);
+  font-size: 0.76rem;
+  color: var(--cocoa-muted);
+  background: var(--cream);
+  border-radius: 999px;
+  padding: 0.22rem 0.7rem;
+  white-space: nowrap;
+}
+.fontline .f1 {
+  font-family: 'Jiin2606011', var(--pen);
+}
+.fontline .f3 {
+  font-family: 'Jiin2606061', var(--pen);
+}
+.fontline .f5 {
+  font-family: 'Jiin2606151', var(--pen);
+}

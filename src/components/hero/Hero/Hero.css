@@ -1,0 +1,106 @@
+.hero {
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(2.6rem, 7vh, 4.6rem) clamp(1.2rem, 4vw, 2.5rem) clamp(2.6rem, 6vh, 4rem);
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: clamp(1.5rem, 4vw, 3.2rem);
+  align-items: center;
+}
+.hero .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--lavender-ink);
+  background: var(--lavender-tint);
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  margin-bottom: 1.2rem;
+}
+.hero h1 {
+  font-size: clamp(2.4rem, 5.2vw, 3.7rem);
+  line-height: 1.26;
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+.hero p.sub {
+  margin: 1.3rem 0 1.8rem;
+  font-size: 1.06rem;
+  color: var(--cocoa-muted);
+  max-width: 30rem;
+  text-wrap: pretty;
+}
+.hero-cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.demo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--cocoa);
+  text-decoration: none;
+  font-size: 0.96rem;
+}
+.demo-link:hover {
+  color: var(--rose-ink);
+}
+.hero-visual {
+  position: relative;
+  justify-self: center;
+  width: min(100%, 440px);
+}
+.hero-tappy {
+  position: absolute;
+  width: 40%;
+  right: -7%;
+  bottom: -10%;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 8px 18px rgba(90, 65, 54, 0.18));
+  animation: bob 3.4s ease-in-out infinite;
+}
+@media (max-width: 840px) {
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding-top: 2.2rem;
+  }
+  .hero-copy {
+    order: 1;
+  }
+  .hero-visual {
+    order: 2;
+    width: min(86vw, 360px);
+    margin-top: 0.5rem;
+  }
+  .hero p.sub {
+    margin-inline: auto;
+  }
+  .hero-cta {
+    justify-content: center;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+  }
+  .hero h1 {
+    font-size: clamp(2.05rem, 8.5vw, 2.7rem);
+  }
+}
+@media (max-width: 480px) {
+  .hero-visual {
+    width: min(90vw, 330px);
+  }
+  .hero-tappy {
+    width: 36%;
+    right: -2%;
+  }
+}
