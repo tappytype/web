@@ -53,7 +53,6 @@ export default function FounderStory() {
               width={1200}
               height={142}
             />
-            <figcaption>위: 내가 쓴 글자 · 아래: AI가 채운 결과</figcaption>
           </figure>
         </div>
 
