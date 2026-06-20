@@ -1,7 +1,9 @@
+import type { ReactNode } from 'react'
+
 interface SectionHeadingProps {
   label: string
   title: string
-  sub?: string
+  sub?: ReactNode
 }
 
 // 섹션 상단 표준 레이아웃: 손글씨 라벨 + 제목 + (선택) 보조문구

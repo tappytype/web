@@ -23,11 +23,26 @@ const SHOTS: Shot[] = [
   },
 ]
 
+// 'A, B, C — 설명' 형태의 보조문구에서 대시(—) 앞 리스트와 뒤 설명이
+// 어색한 지점이 아니라 대시에서 두 줄로 나뉘도록 분리 렌더한다.
+function renderPv2Sub(sub: string) {
+  const sep = ' — '
+  const i = sub.indexOf(sep)
+  if (i === -1) return sub
+  return (
+    <>
+      {sub.slice(0, i)} &mdash;
+      <br />
+      {sub.slice(i + sep.length)}
+    </>
+  )
+}
+
 export default function PreviewUses() {
   const { t } = useLang()
   return (
     <Section id="preview">
-      <SectionHeading label={t('pv2_label')} title={t('pv2_title')} sub={t('pv2_sub')} />
+      <SectionHeading label={t('pv2_label')} title={t('pv2_title')} sub={renderPv2Sub(t('pv2_sub'))} />
       <div className="gallery">
         {SHOTS.map((shot) => (
           <figure className="frame-card" key={shot.src}>
