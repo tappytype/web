@@ -10,9 +10,13 @@ export default function Hero() {
       <div className="hero-copy">
         <span className="eyebrow">✦ {t('badge')}</span>
         <h1>
-          {t('hero_h1a')}
+          {t('hero_h1a_pre')}
+          <span className="hw mark">{t('hero_h1a_hl')}</span>
+          {t('hero_h1a_post')}
           <br />
-          {t('hero_h1b')}
+          {t('hero_h1b_pre')}
+          <span className="mark">{t('hero_h1b_hl')}</span>
+          {t('hero_h1b_post')}
         </h1>
         <p className="sub">{t('hero_sub')}</p>
 

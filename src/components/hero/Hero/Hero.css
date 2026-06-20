@@ -26,6 +26,17 @@
   letter-spacing: -0.015em;
   text-wrap: balance;
 }
+/* '손글씨'만 산뜻체로 강조. 주변 글자와 눈높이가 비슷하도록 약간만 키움 */
+.hero h1 .hw {
+  font-family: 'Jiin2606151', var(--pen);
+  font-size: 1.5em;
+  line-height: 1;
+}
+/* 개인정보처리방침과 동일한 형광펜 하이라이트 */
+.hero h1 .mark {
+  background: linear-gradient(transparent 62%, var(--lavender-tint) 62%);
+  padding: 0 0.05em;
+}
 .hero p.sub {
   margin: 1.3rem 0 1.8rem;
   font-size: 1.06rem;

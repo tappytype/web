@@ -9,8 +9,12 @@
   "ab_big": "App Store",
 
   "badge": "Write 39 · the other 11,133 are one tap",
-  "hero_h1a": "Your handwriting,",
-  "hero_h1b": "a real font",
+  "hero_h1a_pre": "Your ",
+  "hero_h1a_hl": "handwriting",
+  "hero_h1a_post": ",",
+  "hero_h1b_pre": "a real ",
+  "hero_h1b_hl": "font",
+  "hero_h1b_post": "",
   "hero_sub": "Write a few characters with your finger or Apple Pencil, and AI fills in all 11,172 Hangul syllables in your style. Export a real .ttf and use it in GoodNotes, Procreate, Keynote — anywhere.",
   "cta_demo": "Watch 55s demo",
 
@@ -73,8 +77,8 @@
 
   "dl_label": "your first cell",
   "dl_title": "Write a few characters today",
-  "dl_sub": "Fill the first cell, and Tappy taps in the rest. This is the moment your handwriting becomes a real font.",
-  "dl_universal": "iPhone · iPad universal app",
+  "dl_sub": "Fill the first cell, and Tappy taps in the rest.\nThis is the moment your handwriting becomes a real font.",
+  "dl_universal": "Works on iPhone and iPad",
   "dl_qr": "On desktop? Scan the code with your phone.",
 
   "ft_tag": "AI Korean handwriting font maker for iPhone & iPad",
