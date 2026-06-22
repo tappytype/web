@@ -1,5 +1,4 @@
 import { useLang } from '@/contexts/LangContext'
-import type { TranslationKey } from '@/i18n/config'
 import Section from '@/components/ui/Section/Section'
 import SectionHeading from '@/components/ui/SectionHeading/SectionHeading'
 import './Postcard.css'
@@ -7,26 +6,22 @@ import './Postcard.css'
 interface Card {
   src: string
   alt: string
-  captionKey: TranslationKey
 }
 
-// 산뜻체 손글씨 + 사진/파스텔 배경으로 만든 실제 엽서(4:5).
-// 메시지는 Maya 결(팬·자기표현). 영어 페이지는 캡션에 로마자·뜻 병기(한글 학습 즐거움), 한국어는 생략.
+// 산뜻체 손글씨 + 사진/파스텔 배경 무드보드 엽서(4:5). 감성 가사·편지 톤으로 통일.
+// 카드 자체가 영어+한글로 무드를 전하므로 별도 캡션(로마자 병기)은 두지 않는다.
 const CARDS: Card[] = [
   {
     src: '/assets/postcard-walk.jpg',
-    alt: 'A handwritten postcard reading 사랑해 over a photo of summer green trees',
-    captionKey: 'pc_cap1',
+    alt: 'A handwritten postcard over summer green trees: 완벽한 날씨 딱 맞는 Playlist',
   },
   {
     src: '/assets/postcard-pastel.jpg',
-    alt: 'A handwritten postcard reading 보고 싶어 / 또 봐 on a soft pink background',
-    captionKey: 'pc_cap2',
+    alt: 'A handwritten postcard on soft pink: Polaroid Love, 사랑 촌스러운 그 감정',
   },
   {
     src: '/assets/postcard-desk.jpg',
-    alt: 'A handwritten postcard reading 고마워 over a cozy desk photo',
-    captionKey: 'pc_cap3',
+    alt: 'A handwritten postcard over a cozy desk: Dear younger me, Love older you',
   },
 ]
 
@@ -37,15 +32,11 @@ export default function Postcard() {
       <p className="postcard-soon">{t('pc_soon')}</p>
       <SectionHeading label={t('pc_label')} title={t('pc_title')} sub={t('pc_sub')} />
       <div className="postcard-gallery">
-        {CARDS.map((card) => {
-          const caption = t(card.captionKey)
-          return (
-            <figure className="postcard-card" key={card.src}>
-              <img src={card.src} alt={card.alt} loading="lazy" width={1080} height={1350} />
-              {caption && <figcaption>{caption}</figcaption>}
-            </figure>
-          )
-        })}
+        {CARDS.map((card) => (
+          <figure className="postcard-card" key={card.src}>
+            <img src={card.src} alt={card.alt} loading="lazy" width={1080} height={1350} />
+          </figure>
+        ))}
       </div>
     </Section>
   )
