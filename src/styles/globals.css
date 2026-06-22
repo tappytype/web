@@ -78,6 +78,7 @@ section {
   color: var(--rose-ink);
   display: block;
   margin-bottom: 0.4rem;
+  -webkit-text-stroke: 0.6px currentColor;   /* 손글씨 라벨 faux bold(제목 역할) */
 }
 h2 {
   font-family: var(--title);

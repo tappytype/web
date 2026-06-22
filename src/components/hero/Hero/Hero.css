@@ -31,6 +31,7 @@
   font-family: 'Jiin2606151', var(--pen);
   font-size: 1.5em;
   line-height: 1;
+  -webkit-text-stroke: 0.9px currentColor;   /* 산뜻체 강조 faux bold(크니까 더) */
 }
 /* 개인정보처리방침과 동일한 형광펜 하이라이트 */
 .hero h1 .mark {
