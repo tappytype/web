@@ -1,6 +1,10 @@
 #insta {
   text-align: center;
 }
+/* SectionHeading의 sub(.sec-sub)는 max-width 38rem이라 박스가 왼쪽에 붙는다 → 가운데로. */
+#insta .sec-sub {
+  margin-inline: auto;
+}
 .insta-embed {
   margin-top: 2rem;
 }
