@@ -41,6 +41,10 @@
   "moment_sub": "Writing them all by hand is nearly impossible. TappyType's AI learns your style from the few you write and draws the rest to match.",
   "counter_unit": "glyphs",
 
+  "lw_label": "Learn as you write",
+  "lw_title": "Trace fun sentences, and your font takes shape",
+  "lw_sub": "Fun K-culture sentences teach you key letters as you write — and every line shows its meaning.",
+
   "fg_label": "Real fonts",
   "fg_title": "Every one made with TappyType",
   "fg_sub": "Same sentence, a different hand each time — all real .ttf handwriting fonts.",

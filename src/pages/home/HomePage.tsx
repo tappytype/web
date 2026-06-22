@@ -5,6 +5,7 @@ import Nav from '@/components/layout/Nav/Nav'
 import Footer from '@/components/layout/Footer/Footer'
 import Hero from '@/components/hero/Hero/Hero'
 import Howto from '@/components/howto/Howto/Howto'
+import LearnWrite from '@/components/learn/LearnWrite/LearnWrite'
 import Moment from '@/components/moment/Moment/Moment'
 import FontGallery from '@/components/fonts/FontGallery/FontGallery'
 import Postcard from '@/components/postcard/Postcard/Postcard'
@@ -30,6 +31,7 @@ export default function HomePage({ lang }: HomePageProps) {
       <Hero />
       <main>
         <Howto />
+        <LearnWrite />
         <Moment />
         <FontGallery />
         <Postcard />

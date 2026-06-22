@@ -1,0 +1,13 @@
+.learn-shot {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.learn-shot img {
+  width: min(400px, 84vw);
+  height: auto;
+  border-radius: 1.4rem;
+  box-shadow: var(--shadow-pop, 0 18px 44px rgba(60, 40, 30, 0.16));
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
