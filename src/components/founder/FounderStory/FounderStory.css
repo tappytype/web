@@ -23,17 +23,28 @@
 
 /* 손글씨 인사말 */
 .letter > p.story-hook {
-  font-family: var(--pen-me);
+  font-family: 'Caveat', var(--pen-me);
   font-size: clamp(2rem, 5vw, 2.8rem);
   color: var(--rose-ink);
   line-height: 1.2;
   margin-top: 0;
 }
+/* 핵심 한 줄(손글씨를 폰트로 만든 꿈) — 내 손글씨로 강조 */
 .letter > p.story-intro {
   margin-top: 0.7rem;
-  font-size: 1.1rem;
-  line-height: 1.85;
-  color: var(--cocoa-muted);
+  font-family: 'Caveat', var(--pen-me);
+  font-size: clamp(1.5rem, 3.4vw, 2rem);
+  line-height: 1.55;
+  color: var(--rose-ink);
+  -webkit-text-stroke: 0.35px currentColor;
+}
+/* 서명 — 내 손글씨로 */
+.letter > p.story-sign {
+  font-family: 'Caveat', var(--pen-me);
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  color: var(--rose-ink);
+  -webkit-text-stroke: 0.3px currentColor;
+  margin-top: 1.6rem;
 }
 
 /* 이미지 — 가운데 figure */
@@ -123,12 +134,7 @@
   margin-top: clamp(1.9rem, 5vw, 2.5rem);
   color: var(--cocoa);
 }
-.letter > p.story-sign {
-  font-family: var(--pen-me);
-  font-size: 1.6rem;
-  color: var(--lavender-ink);
-  margin-top: 0.8rem;
-}
+/* story-sign 손글씨 정의는 위(.story-intro 옆)로 통합 — 중복 제거 */
 .letter > .story-link {
   display: inline-block;
   margin-top: 1.2rem;

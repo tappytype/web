@@ -1,4 +1,10 @@
 /* ───────── @font-face (TappyType으로 구운 손글씨 폰트들) ───────── */
+/* 영어 손편지용 — Jiin 한글 폰트는 라틴이 약해서 영어엔 Caveat(둥근 마커펜). */
+@font-face {
+  font-family: 'Caveat';
+  src: url('/assets/caveat.woff2') format('woff2');
+  font-display: swap;
+}
 @font-face {
   font-family: 'TappyTypeSample';
   src: url('/assets/myhandwritting.woff2') format('woff2');
