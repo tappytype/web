@@ -24,6 +24,8 @@ export default function Seo({ path }: SeoProps) {
     operatingSystem: 'iOS, iPadOS',
     url: canonical,
     image: SITE.ogImage,
+    screenshot: [SITE.origin + '/assets/shot-main.png', SITE.origin + '/assets/shot-onboarding.png'],
+    inLanguage: ['ko', 'en'],
     downloadUrl: 'https://apps.apple.com/us/app/tappytype/id6777860562',
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     author: {
@@ -39,6 +41,10 @@ export default function Seo({ path }: SeoProps) {
       <html lang={lang} />
       <title>{t('seo_title')}</title>
       <meta name="description" content={t('seo_desc')} />
+      <meta
+        name="robots"
+        content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+      />
       <link rel="canonical" href={canonical} />
       <link rel="alternate" hrefLang="ko" href={koUrl} />
       <link rel="alternate" hrefLang="en" href={enUrl} />
@@ -48,6 +54,10 @@ export default function Seo({ path }: SeoProps) {
       <meta property="og:title" content={t('og_title')} />
       <meta property="og:description" content={t('og_desc')} />
       <meta property="og:image" content={SITE.ogImage} />
+      <meta property="og:image:type" content="image/jpeg" />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={t('og_alt')} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonical} />
       <meta property="og:locale" content={locale} />
@@ -59,6 +69,7 @@ export default function Seo({ path }: SeoProps) {
       <meta name="twitter:title" content={t('og_title')} />
       <meta name="twitter:description" content={t('og_desc')} />
       <meta name="twitter:image" content={SITE.ogImage} />
+      <meta name="twitter:image:alt" content={t('og_alt')} />
 
       <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
     </Head>

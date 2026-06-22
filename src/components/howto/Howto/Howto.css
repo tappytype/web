@@ -8,10 +8,6 @@
   display: flex;
   flex-direction: column;
 }
-.story:hover .frame {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-pop);
-}
 .story .frame {
   position: relative;
   aspect-ratio: 9 / 16;
@@ -22,7 +18,6 @@
   border-radius: 1.2rem;
   border: 1px solid var(--soft-gray);
   box-shadow: var(--shadow-card);
-  transition: 0.3s;
 }
 .story .frame img {
   width: 100%;

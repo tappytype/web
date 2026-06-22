@@ -24,7 +24,7 @@
 .download-band.filled .dl-cell {
   border-style: solid;
   border-color: var(--lavender);
-  background: var(--lavender-tint);
+  background: var(--warm-white);
   color: var(--lavender-ink);
 }
 /* 라인박스를 글자 크기에 맞춰 줄이면 place-items:center로 시각적 정중앙에 온다 */

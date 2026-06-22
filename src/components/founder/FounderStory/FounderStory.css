@@ -51,6 +51,69 @@
   box-shadow: var(--shadow-pop);
   border: 1px solid var(--soft-gray);
 }
+/* 두 장의 세로형 캡쳐를 가로로 나란히 — '이렇게 써요'의 테이프 프레임 디자인 차용 */
+.letter > figure.pair {
+  display: flex;
+  gap: clamp(1rem, 3vw, 1.8rem);
+  align-items: flex-start;
+  justify-content: center;
+}
+.letter > figure.pair .frame-card {
+  position: relative;
+  width: 50%;
+}
+.letter > figure.pair .frame-card .pic {
+  position: relative;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  border: 1px solid rgba(230, 226, 221, 0.8);
+  box-shadow: var(--shadow-pop);
+  background: linear-gradient(160deg, var(--cream), var(--blush));
+  aspect-ratio: 3 / 4;
+  display: grid;
+  place-items: center;
+}
+.letter > figure.pair .frame-card .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+.letter > figure.pair .frame-card .tape {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-3deg);
+  width: 96px;
+  height: 26px;
+  border-radius: 3px;
+  z-index: 2;
+}
+.letter > figure.pair .frame-card:nth-child(odd) {
+  transform: rotate(-1.2deg);
+}
+.letter > figure.pair .frame-card:nth-child(even) {
+  transform: rotate(1.4deg);
+}
+.letter > figure.pair .frame-card:nth-child(odd) .tape {
+  background: var(--rose);
+  opacity: 0.55;
+}
+.letter > figure.pair .frame-card:nth-child(even) .tape {
+  background: var(--lavender);
+  opacity: 0.45;
+  transform: translateX(-50%) rotate(2.5deg);
+}
+@media (max-width: 480px) {
+  .letter > figure.pair {
+    flex-direction: column;
+    align-items: center;
+  }
+  .letter > figure.pair .frame-card {
+    width: min(100%, 320px);
+  }
+}
+
 /* 가로로 긴 결과 비교 strip: 단 폭을 꽉 채움 */
 .letter > figure.strip img {
   width: 100%;

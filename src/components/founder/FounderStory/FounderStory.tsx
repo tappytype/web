@@ -21,22 +21,39 @@ export default function FounderStory() {
           making my own font, I decided to build an iPad app that easily creates character image
           files.
         </p>
+        <figure className="pair">
+          <div className="frame-card">
+            <span className="tape" />
+            <div className="pic">
+              <img
+                src="/assets/use-app.jpg"
+                alt="앱에서 내 손글씨로 직접 글자를 쓰는 아이패드 화면"
+                loading="lazy"
+                width={821}
+                height={1095}
+              />
+            </div>
+          </div>
+          <div className="frame-card">
+            <span className="tape" />
+            <div className="pic">
+              <img
+                src="/assets/story-celebration.png"
+                alt="글자 셀이 내 손글씨로 채워진 아이패드 편집 화면 — 캐릭터 이미지 파일을 만드는 앱"
+                loading="lazy"
+                width={900}
+                height={1200}
+              />
+            </div>
+          </div>
+        </figure>
+
         <p>
           However, there&rsquo;s still a challenge because of the unique properties of the Korean
           character <span className="han">한글</span>. I need to write out each character for the
           11,172 possible character combinations (at least 2350). If not, you will see clumsy
           characters. Neither the Apple Pencil nor NanoBanana can solve this problem.
         </p>
-
-        <figure className="shot">
-          <img
-            src="/assets/story-celebration.png"
-            alt="글자 셀이 내 손글씨로 채워진 아이패드 편집 화면 — 캐릭터 이미지 파일을 만드는 앱"
-            loading="lazy"
-            width={900}
-            height={1200}
-          />
-        </figure>
 
         <p>
           I set aside my ideas and searched the internet until I found six-year-old open-source code
