@@ -23,11 +23,10 @@
 
 /* 산뜻체 엽서 카드 — 4:5, 살짝 기울여 손맛 + 부드러운 그림자. */
 .postcard-card {
+  position: relative;   /* 테이프(absolute) 기준 */
   margin: 0;
   width: min(300px, 78vw);
-  background: #fff;
   border-radius: 1rem;
-  overflow: hidden;
   box-shadow: var(--shadow-pop, 0 14px 34px rgba(60, 40, 30, 0.14));
 }
 
@@ -35,6 +34,28 @@
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 1rem;   /* 카드 overflow 대신 img 자체를 둥글게(테이프가 위로 삐치게) */
+}
+
+/* 워시 테이프 — 다꾸 감성. 카드 상단에 살짝 비뚜로 붙인 마스킹 테이프. */
+.postcard-tape {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  width: 112px;
+  height: 30px;
+  border-radius: 3px;
+  transform: translateX(-50%) rotate(-3deg);
+  z-index: 3;
+}
+.postcard-card:nth-child(odd) .postcard-tape {
+  background: var(--rose, #f6d9de);
+  opacity: 0.6;
+}
+.postcard-card:nth-child(even) .postcard-tape {
+  background: var(--lavender, #e3dcf4);
+  opacity: 0.55;
+  transform: translateX(-50%) rotate(2.5deg);
 }
 
 /* 영어 페이지 전용 캡션(로마자 · 뜻) — 한글 학습 즐거움. 한국어 페이지는 빈 값이라 렌더 안 됨. */

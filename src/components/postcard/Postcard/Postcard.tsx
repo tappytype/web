@@ -34,6 +34,7 @@ export default function Postcard() {
       <div className="postcard-gallery">
         {CARDS.map((card) => (
           <figure className="postcard-card" key={card.src}>
+            <span className="postcard-tape" />
             <img src={card.src} alt={card.alt} loading="lazy" width={1080} height={1350} />
           </figure>
         ))}
