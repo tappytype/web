@@ -1,9 +1,16 @@
 #insta {
   text-align: center;
 }
-/* SectionHeading의 sub(.sec-sub)는 max-width 38rem이라 박스가 왼쪽에 붙는다 → 가운데로. */
+/* SectionHeading의 sub(.sec-sub)는 max-width 38rem이라 박스가 왼쪽에 붙는다 → 가운데로.
+   한 줄로(줄바꿈 방지) — 단 모바일은 좁아서 넘치므로 줄바꿈 허용. */
 #insta .sec-sub {
   margin-inline: auto;
+  white-space: nowrap;
+}
+@media (max-width: 560px) {
+  #insta .sec-sub {
+    white-space: normal;
+  }
 }
 .insta-embed {
   margin-top: 2rem;

@@ -12,7 +12,7 @@ export default function SectionHeading({ label, title, sub }: SectionHeadingProp
     <>
       <span className="sec-label">{label}</span>
       <h2>{title}</h2>
-      {sub && <p className="sec-sub min-w-fit">{sub}</p>}
+      {sub && <p className="sec-sub">{sub}</p>}
     </>
   )
 }
