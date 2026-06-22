@@ -34,6 +34,7 @@ export default function Postcard() {
   const { t } = useLang()
   return (
     <Section id="postcard">
+      <p className="postcard-soon">{t('pc_soon')}</p>
       <SectionHeading label={t('pc_label')} title={t('pc_title')} sub={t('pc_sub')} />
       <div className="postcard-gallery">
         {CARDS.map((card) => {
