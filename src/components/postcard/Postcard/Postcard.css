@@ -23,6 +23,14 @@
   height: auto;
 }
 
+/* 영어 페이지 전용 캡션(로마자 · 뜻) — 한글 학습 즐거움. 한국어 페이지는 빈 값이라 렌더 안 됨. */
+.postcard-card figcaption {
+  padding: 0.55rem 0.6rem 0.7rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--ink-soft, #9a8b82);
+}
+
 .postcard-card:nth-child(odd) {
   transform: rotate(-1.6deg);
 }
