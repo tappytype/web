@@ -7,6 +7,7 @@ import Hero from '@/components/hero/Hero/Hero'
 import Howto from '@/components/howto/Howto/Howto'
 import Moment from '@/components/moment/Moment/Moment'
 import FontGallery from '@/components/fonts/FontGallery/FontGallery'
+import Postcard from '@/components/postcard/Postcard/Postcard'
 // '이렇게 써요'(PreviewUses) 섹션은 잠시 내려둠 — 되살리려면 이 import와 아래 <PreviewUses /> 주석을 해제.
 // import PreviewUses from '@/components/preview/PreviewUses/PreviewUses'
 import PrivacyPromise from '@/components/privacy/PrivacyPromise/PrivacyPromise'
@@ -31,6 +32,7 @@ export default function HomePage({ lang }: HomePageProps) {
         <Howto />
         <Moment />
         <FontGallery />
+        <Postcard />
         {/* <PreviewUses /> 잠시 내려둠 — 위 import와 함께 되살리면 복구됨 */}
         <PrivacyPromise />
         <FounderStory />

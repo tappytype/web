@@ -1,0 +1,46 @@
+.postcard-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.75rem;
+  margin-top: 2.5rem;
+}
+
+/* 산뜻체 엽서 카드 — 4:5, 살짝 기울여 손맛 + 부드러운 그림자. */
+.postcard-card {
+  margin: 0;
+  width: min(300px, 78vw);
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-pop, 0 14px 34px rgba(60, 40, 30, 0.14));
+}
+
+.postcard-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.postcard-card:nth-child(odd) {
+  transform: rotate(-1.6deg);
+}
+.postcard-card:nth-child(even) {
+  transform: rotate(1.6deg);
+}
+
+@media (max-width: 640px) {
+  .postcard-gallery {
+    gap: 1.75rem;
+  }
+  .postcard-card {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .postcard-card {
+    transform: none;
+  }
+}
