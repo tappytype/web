@@ -4,6 +4,12 @@ import { LINKS } from '@/lib/constants/links'
 import AppleMark from '@/components/ui/AppleMark/AppleMark'
 import './Nav.css'
 
+// 언어를 직접 고르면 루트(/)의 자동 언어 분기를 끈다.
+// functions/_middleware.js 가 ttlang 쿠키가 있으면 추측을 건너뛴다(무한 튕김 방지).
+function rememberLang(lang: string) {
+  document.cookie = `ttlang=${lang}; path=/; max-age=31536000; samesite=lax`
+}
+
 export default function Nav() {
   const { lang, t } = useLang()
   const home = lang === 'ko' ? '/' : '/en'
@@ -52,7 +58,12 @@ export default function Nav() {
       <a className="plain nav-privacy-link" href={LINKS.privacy}>
         {t('nav_privacy')}
       </a>
-      <Link className="lang-toggle" to={otherHome} aria-label={t('lang_switch_label')}>
+      <Link
+        className="lang-toggle"
+        to={otherHome}
+        onClick={() => rememberLang(lang === 'ko' ? 'en' : 'ko')}
+        aria-label={t('lang_switch_label')}
+      >
         {t('lang_switch_to')}
       </Link>
     </nav>
