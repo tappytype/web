@@ -90,7 +90,8 @@
     var INTERVAL = 3200
     var n = imgs.length
     var active = 0
-    var paused = false
+    var visible = false
+    var hovered = false
     var timer = null
 
     function show(i) {
@@ -115,14 +116,14 @@
       })
     }
 
-    function start() {
-      if (paused || reduceMotion || timer) return
-      timer = window.setInterval(function () {
-        show(active + 1)
-      }, INTERVAL)
-    }
-    function stop() {
-      if (timer) {
+    // 보이고 + 호버 아니고 + 모션 허용일 때만 자동재생
+    function sync() {
+      var run = visible && !hovered && !reduceMotion
+      if (run && !timer) {
+        timer = window.setInterval(function () {
+          show(active + 1)
+        }, INTERVAL)
+      } else if (!run && timer) {
         clearInterval(timer)
         timer = null
       }
@@ -134,14 +135,32 @@
       })
     })
     carousel.addEventListener('mouseenter', function () {
-      paused = true
-      stop()
+      hovered = true
+      sync()
     })
     carousel.addEventListener('mouseleave', function () {
-      paused = false
-      start()
+      hovered = false
+      sync()
     })
-    start()
+
+    // 캐러셀이 화면에 보일 때만 자동재생(RUM: 화면 밖에서 lazy 슬라이드로 미리 넘어가
+    // learn-2.jpg가 LCP 6.9s로 늦게 잡히던 문제). 보이는 순간 나머지 슬라이드 즉시 로드.
+    var io = new IntersectionObserver(
+      function (entries) {
+        var nowVisible = entries.some(function (e) {
+          return e.isIntersecting
+        })
+        if (nowVisible && !visible) {
+          imgs.forEach(function (img) {
+            if (img.loading === 'lazy') img.loading = 'eager'
+          })
+        }
+        visible = nowVisible
+        sync()
+      },
+      { rootMargin: '200px' },
+    )
+    io.observe(carousel)
   }
 
   // ── YouTube 데모: 스크롤 근처에서만 iframe + 2배속 API 마운트 (YouTubeDemo 이식) ──
