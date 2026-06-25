@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite-react-ssg build",
+    "build": "tsc --noEmit && vite-react-ssg build && node scripts/strip-react.mjs",
     "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "deploy": "pnpm build && wrangler deploy"

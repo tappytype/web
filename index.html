@@ -37,6 +37,8 @@
 <!-- 페인트 전 스크롤 리빌 활성화(무JS 환경은 그대로 본문 노출) -->
 <script>document.documentElement.classList.add('js-reveal')</script>
 <div id="root"></div>
+<!-- dev(pnpm dev)는 React SPA로 동작. 프로덕션 빌드에선 scripts/strip-react.mjs 가
+     이 하이드레이션 스크립트를 제거하고 islands.js(바닐라)를 주입한다. -->
 <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
