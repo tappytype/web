@@ -39,6 +39,9 @@ export default function Seo({ path }: SeoProps) {
   return (
     <Head>
       <html lang={lang} />
+      {/* charset은 가장 먼저 — react-helmet이 정적 <meta charset>을 1024바이트 밖으로 밀어내
+          Lighthouse Best Practices의 charset 검사가 실패하던 문제를 해결한다. */}
+      <meta charSet="utf-8" />
       <title>{t('seo_title')}</title>
       <meta name="description" content={t('seo_desc')} />
       <meta

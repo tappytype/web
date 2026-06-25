@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8" />
+<!-- charset은 Seo의 react-helmet이 <head> 맨 앞에 주입한다(1024바이트 내 보장). -->
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#FFF7F3" />
 <meta name="apple-mobile-web-app-title" content="TappyType" />
@@ -10,10 +10,25 @@
 <link rel="manifest" href="/site.webmanifest" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<!-- Google Fonts는 렌더를 막지 않도록 비동기 로드한다(print→all 스왑). 본문은 폴백 sans로
+     먼저 그려지고(font-display:swap) 폰트 도착 시 교체 — FCP/LCP의 렌더 지연을 없앤다. -->
+<link
+  rel="preload"
+  as="style"
+  href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&family=Playfair+Display:wght@600;700&display=swap"
+/>
 <link
   href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&family=Playfair+Display:wght@600;700&display=swap"
   rel="stylesheet"
+  media="print"
+  onload="this.media='all'"
 />
+<noscript>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Nanum+Pen+Script&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+</noscript>
 <link rel="preload" as="font" type="font/woff2" href="/assets/hero-jiin0606.woff2" crossorigin />
 <link rel="preload" as="font" type="font/woff2" href="/assets/hero-jiin0601.woff2" crossorigin />
 <link rel="preload" as="font" type="font/woff2" href="/assets/tester-jiin0615.woff2" crossorigin />

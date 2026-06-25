@@ -13,7 +13,8 @@
   font-family: var(--pen);
   font-size: 1.2rem;
   line-height: 1;
-  color: var(--rose-ink);
+  /* blush(#ffe4ea) 위에서 rose-ink(3.41:1)는 WCAG AA 미달 → 더 진한 로즈로 4.5:1 충족 */
+  color: #a8324c;
   background: var(--blush);
   padding: 0.32rem 0.9rem;
   border-radius: 0.5rem;

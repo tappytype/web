@@ -14,6 +14,8 @@ export default function Tester() {
       <p className="note">{t('tt_note')}</p>
       <input
         type="text"
+        id="tt-preview"
+        name="preview"
         maxLength={40}
         value={value}
         onChange={(e) => setValue(e.target.value)}

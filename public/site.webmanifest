@@ -9,6 +9,6 @@
   "theme_color": "#FFF7F3",
   "icons": [
     { "src": "/assets/icon-180.png", "sizes": "180x180", "type": "image/png" },
-    { "src": "/assets/favicon.png", "sizes": "any", "type": "image/png" }
+    { "src": "/assets/favicon.png", "sizes": "64x64", "type": "image/png" }
   ]
 }
