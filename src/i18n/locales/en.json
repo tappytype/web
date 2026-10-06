@@ -66,8 +66,8 @@
 
   "pv_label": "Your data stays yours",
   "pv_title": "No accounts, no ads, no tracking",
-  "pv_li1": "Writing, preview, and font building all happen on your device.",
-  "pv_li2": "Only when you use AI Tap, handwriting images are sent to our server — processed and immediately discarded, never stored.",
+  "pv_li1": "Writing, previewing, and exporting font files happen on your device.",
+  "pv_li2": "Glyph images for AI generation and completed fonts for installation signing are temporarily sent to our server. Their contents are never written to files or logs.",
   "pv_li3": "Your fonts (.ttf) are entirely yours.",
   "pv_link": "Read the full privacy policy →",
 
