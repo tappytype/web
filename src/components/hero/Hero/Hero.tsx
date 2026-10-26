@@ -8,6 +8,7 @@ export default function Hero() {
   return (
     <header className="hero">
       <div className="hero-copy">
+        <p className="brand-intro">{t('brand_intro')}</p>
         <span className="eyebrow">✦ {t('badge')}</span>
         <h1>
           {t('hero_h1a_pre')}

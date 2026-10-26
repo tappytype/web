@@ -16,6 +16,7 @@ import FounderStory from '@/components/founder/FounderStory/FounderStory'
 import Makers from '@/components/makers/Makers/Makers'
 import Instagram from '@/components/instagram/Instagram/Instagram'
 import DownloadBand from '@/components/download/DownloadBand/DownloadBand'
+import Faq from '@/components/faq/Faq'
 
 const HOME_PATH = { ko: '/', en: '/en' }
 
@@ -37,6 +38,7 @@ export default function HomePage({ lang }: HomePageProps) {
         <Postcard />
         {/* <PreviewUses /> 잠시 내려둠 — 위 import와 함께 되살리면 복구됨 */}
         <PrivacyPromise />
+        <Faq />
         <FounderStory />
         <Makers />
         <Instagram />

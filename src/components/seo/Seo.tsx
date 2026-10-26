@@ -1,6 +1,6 @@
 import { Head } from 'vite-react-ssg'
 import { useLang } from '@/contexts/LangContext'
-import { SITE } from '@/lib/constants/links'
+import { LINKS, SITE } from '@/lib/constants/links'
 
 interface SeoProps {
   // 현재 페이지의 ko/en 경로 쌍 (canonical·hreflang 생성용)
@@ -17,8 +17,9 @@ export default function Seo({ path }: SeoProps) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'TappyType',
-    alternateName: '태피타입',
+    '@id': SITE.origin + '/#app',
+    name: lang === 'ko' ? '이지폰트 TappyType' : 'TappyType EasyFont',
+    alternateName: ['TappyType', 'EasyFont', '이지폰트', '태피타입'],
     description: t('seo_desc'),
     applicationCategory: 'DesignApplication',
     operatingSystem: 'iOS, iPadOS',
@@ -26,7 +27,10 @@ export default function Seo({ path }: SeoProps) {
     image: SITE.ogImage,
     screenshot: [SITE.origin + '/assets/shot-main.png', SITE.origin + '/assets/shot-onboarding.png'],
     inLanguage: ['ko', 'en'],
-    downloadUrl: 'https://apps.apple.com/us/app/tappytype/id6777860562',
+    downloadUrl: LINKS.appStore,
+    sameAs: [LINKS.appStore, LINKS.instagram],
+    isAccessibleForFree: true,
+    featureList: ['Handwriting editor', 'AI fill for 2,350 Hangul syllables', 'Font preview', 'TTF export (in-app purchase)'],
     offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
     author: {
       '@type': 'Organization',
@@ -53,7 +57,7 @@ export default function Seo({ path }: SeoProps) {
       <link rel="alternate" hrefLang="en" href={enUrl} />
       <link rel="alternate" hrefLang="x-default" href={koUrl} />
 
-      <meta property="og:site_name" content="TappyType" />
+      <meta property="og:site_name" content="TappyType EasyFont · 이지폰트" />
       <meta property="og:title" content={t('og_title')} />
       <meta property="og:description" content={t('og_desc')} />
       <meta property="og:image" content={SITE.ogImage} />

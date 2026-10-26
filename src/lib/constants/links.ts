@@ -1,6 +1,6 @@
 // 외부 링크·식별자 단일 출처
 export const LINKS = {
-  appStore: 'https://apps.apple.com/us/app/tappytype/id6777860562',
+  appStore: 'https://apps.apple.com/app/id6777860562',
   instagram: 'https://www.instagram.com/tappytype/',
   jiin: 'https://usejiin.link',
   bobae: 'https://bobaejeon.github.io',

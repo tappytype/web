@@ -11,6 +11,7 @@ export default function Footer() {
         <span className="type">Type</span>
       </div>
       <div>{t('ft_tag')}</div>
+      <p>{t('brand_description')}</p>
       <div className="links">
         <a href={LINKS.appStore} target="_blank" rel="noopener">
           {t('ft_download')}

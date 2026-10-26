@@ -6,12 +6,12 @@ import './Moment.css'
 
 export default function Moment() {
   const { t } = useLang()
-  const [count, startCount] = useCountUp(11172)
+  const [count, startCount] = useCountUp(2350)
 
   return (
     <Section id="moment" onReveal={startCount}>
       <div className="moment">
-        <div className="bignum">11,172</div>
+        <div className="bignum">2,350</div>
         <div className="m-copy">
           <span className="sec-label">{t('moment_label')}</span>
           <h2>{t('moment_title')}</h2>

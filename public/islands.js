@@ -46,13 +46,13 @@
     if (el.id === 'moment') startCountUp() // Moment 섹션 진입 시 카운트업(원본 onReveal)
   }
 
-  // ── Moment 카운트업: #moment .counter .to 를 0 → 11,172 (useCountUp 이식) ──
+  // ── Moment 카운트업: #moment .counter .to 를 0 → 2,350 (useCountUp 이식) ──
   function startCountUp() {
     var to = document.querySelector('#moment .counter .to')
     if (!to || to.getAttribute('data-counted')) return
     to.setAttribute('data-counted', '1')
 
-    var target = 11172
+    var target = 2350
     if (reduceMotion) {
       to.textContent = target.toLocaleString()
       return
