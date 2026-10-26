@@ -21,7 +21,8 @@
 - npm run build: TypeScript와 한국어·영어 정적 페이지 빌드 통과.
 - 생성된 두 HTML의 단일 canonical·description, hreflang 3개, JSON-LD, FAQ, 기능 범위, 로컬 자산 경로 검사 통과.
 - 개인 Chrome에서 한국어·영어 화면과 언어 이동 확인.
-- 배포·Google 재수집 요청은 수행하지 않았다. 배포 후 공개 HTML과 실제 검색 도구 상태를 별도로 확인해야 한다.
+- 사용자 승인 후 `cf95755`를 main에 반영하고 Cloudflare Workers에 배포했다. 배포 버전은 `214da9f5-d5ce-4c14-b61c-479d883ed552`이다. 개인 Chrome에서 tappytype.com의 한국어·영어 제목, 본문, 언어 이동과 영어 canonical·JSON-LD를 확인했다.
+- Google 루트 URL 검사에서는 기존 색인이 확인됐다. 변경 후 색인 생성 요청을 실행했으나 접수 완료 안내를 확인하지 못했다. 이번 배포 내용이 Google 검색 결과에 반영됐다고 해석하지 않는다.
 - 웹 검색 실적은 App Store 검색 실적과 다르다. 앱 이름 변경의 영향은 App Analytics의 App Store Search 유입과 전환으로 별도 평가해야 한다.
 
 ## 출처
